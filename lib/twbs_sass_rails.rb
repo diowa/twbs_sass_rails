@@ -1,0 +1,2 @@
+module TwbsSassRails
+end
