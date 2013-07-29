@@ -12,3 +12,7 @@ gemspec
 
 # To use debugger
 # gem 'debugger'
+
+# Dummy application dependencies
+gem 'therubyracer'
+gem 'less-rails'

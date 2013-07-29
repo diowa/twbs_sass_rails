@@ -7,16 +7,28 @@ require "twbs_sass_rails/version"
 Gem::Specification.new do |s|
   s.name        = "twbs_sass_rails"
   s.version     = TwbsSassRails::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of TwbsSassRails."
-  s.description = "TODO: Description of TwbsSassRails."
+  s.authors     = ["diowa"]
+  s.email       = ["dev@diowa.com"]
+  s.homepage    = "https://github.com/diowa/twbs_sass_rails"
+  s.summary     = "Bootstrap Sass assets in a Rails application."
+  s.description = s.summary
+  s.license     = "BSD 2-Clause"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_files = Dir["test/**/*"]
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.require_paths = ["lib"]
 
   s.add_dependency "rails", "~> 4.0.0"
+  s.add_dependency 'therubyracer'
+  s.add_dependency 'less-rails'
 
-  s.add_development_dependency "sqlite3"
+  s.add_development_dependency 'capybara'
+  s.add_development_dependency 'coveralls'
+  s.add_development_dependency 'debugger'
+  s.add_development_dependency 'minitest'
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'simplecov'
+  s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'turn'
 end
