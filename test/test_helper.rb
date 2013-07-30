@@ -1,5 +1,5 @@
 # Configure Rails Environment
-ENV["RAILS_ENV"] = "test"
+ENV['RAILS_ENV'] = 'test'
 
 if ENV['CI']
   require 'coveralls'
@@ -9,17 +9,21 @@ else
   SimpleCov.start 'rails'
 end
 
-require File.expand_path("../dummy/config/environment.rb",  __FILE__)
-require "rails/test_help"
-require "minitest/autorun"
-require "capybara/rails"
-require "debugger"
-require "turn"
+require File.expand_path('../dummy/config/environment.rb',  __FILE__)
+require 'rails/test_help'
+require 'minitest/autorun'
+require 'capybara/rails'
+require 'debugger'
+require 'turn'
 
 Rails.backtrace_cleaner.remove_silencers!
 
 # Load support files
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
+
+# For generators
+require 'rails/generators/test_case'
+require 'generators/twbs/install/install_generator'
 
 class IntegrationTest < MiniTest::Spec
   include Capybara::DSL

@@ -1,25 +1,25 @@
-$:.push File.expand_path("../lib", __FILE__)
+$:.push File.expand_path('../lib', __FILE__)
 
 # Maintain your gem's version:
-require "twbs_sass_rails/version"
+require 'twbs_sass_rails/version'
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "twbs_sass_rails"
+  s.name        = 'twbs_sass_rails'
   s.version     = TwbsSassRails::VERSION
-  s.authors     = ["diowa"]
-  s.email       = ["dev@diowa.com"]
-  s.homepage    = "https://github.com/diowa/twbs_sass_rails"
-  s.summary     = "Bootstrap Sass assets in a Rails application."
+  s.authors     = ['diowa']
+  s.email       = ['dev@diowa.com']
+  s.homepage    = 'https://github.com/diowa/twbs_sass_rails'
+  s.summary     = 'Bootstrap Sass assets in a Rails application.'
   s.description = s.summary
-  s.license     = "BSD 2-Clause"
+  s.license     = 'BSD 2-Clause'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency "rails", "~> 4.0.0"
+  s.add_dependency 'rails', '~> 4.0.0'
   s.add_dependency 'therubyracer'
   s.add_dependency 'less-rails'
 

@@ -8,4 +8,5 @@ test/dummy/tmp/
 test/dummy/.sass-cache
 
 # Others
-/coverage
+coverage
+tmp
