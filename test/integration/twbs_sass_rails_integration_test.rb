@@ -2,7 +2,7 @@ require 'test_helper'
 
 describe "twbs sass rails integration" do
   it "provides bootstrap stylesheet on the asset pipeline" do
-    visit '/assets/bootstrap.css'
+    visit '/assets/application.css'
     page.text.must_include '* Bootstrap'
   end
 
