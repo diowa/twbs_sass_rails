@@ -1,23 +1,20 @@
-require 'rails/generators'
-
 module TwbsSassRails
   module Generators
-    class InstallGenerator < Rails::Generators::Base
+    class InstallGenerator < ::Rails::Generators::Base
 
-      source_root File.expand_path('../templates', __FILE__)
+      source_root File.expand_path(File.join(File.dirname(__FILE__), 'templates'))
       desc "This generator installs Bootstrap to Asset Pipeline"
 
       def copy_assets
-        # TODO application sees generator but doesn't run it
         js_manifest = 'app/assets/javascripts/application.js'
-        if File.exist?(js_manifest)
+        if File.exist?(File.join(destination_root, js_manifest))
           insert_into_file js_manifest, "//= require twbs/bootstrap\n", after: "jquery_ujs\n"
         else
           copy_file 'application.js', js_manifest
         end
 
         css_manifest = 'app/assets/stylesheets/application.css'
-        if File.exist?(css_manifest)
+        if File.exist?(File.join(destination_root, css_manifest))
           insert_into_file css_manifest, " *= require twbs\n", after: "require_self\n"
         else
           copy_file 'application.css', css_manifest

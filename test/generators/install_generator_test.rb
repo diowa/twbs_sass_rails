@@ -15,15 +15,13 @@ class InstallGeneratorTest < ::Rails::Generators::TestCase
   end
 
   test "Assert existing application.css properly requires bootstrap" do
-    #TODO : fix this one. it hangs (waits for user input)
-    #copy_default_asset 'application.css', 'stylesheets'
+    copy_default_asset 'application.css', 'stylesheets'
     run_generator
     assert_file 'app/assets/stylesheets/application.css', /^ \*\= require twbs$/
   end
 
   test "Assert existing application.js properly requires bootstrap" do
-    #TODO : fix this one. it hangs (waits for user input)
-    #copy_default_asset 'application.js', 'javascripts'
+    copy_default_asset 'application.js', 'javascripts'
     run_generator
     assert_file 'app/assets/javascripts/application.js', /^\/\/\= require twbs\/bootstrap$/
   end
