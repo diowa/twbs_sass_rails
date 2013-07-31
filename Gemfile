@@ -16,3 +16,4 @@ gemspec
 # Dummy application dependencies
 gem 'therubyracer'
 gem 'less-rails'
+gem 'uglifier'
