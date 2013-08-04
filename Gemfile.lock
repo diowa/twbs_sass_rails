@@ -140,7 +140,7 @@ DEPENDENCIES
   coveralls
   debugger
   less-rails
-  minitest
+  minitest (~> 4)
   rails (= 4.0.0)
   rake
   simplecov

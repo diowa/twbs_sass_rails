@@ -14,6 +14,7 @@ describe "assets precompile in production environment integration" do
       visit "/assets/#{font_file}"
       visit "/assets/#{get_asset_name('application', 'css')}"
       page.text.must_include font_file
+      page.text.must_include "#{font_file}?\#iefix" if fmt == 'eot'
     end
   end
 
