@@ -9,4 +9,10 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Dummy::Application.config.secret_key_base = '3de56e054bcdc8084c1593be5a466b521c066bacb113c2a8c846918774eb45c5b80dd7adba1c34f2628a858a6002ef61daba311acd97cfb0c2b9477e2446a09b'
+
+if Rails.version.start_with? '4'
+  Dummy::Application.config.secret_key_base = '3de56e054bcdc8084c1593be5a466b521c066bacb113c2a8c846918774eb45c5b80dd7adba1c34f2628a858a6002ef61daba311acd97cfb0c2b9477e2446a09b'
+else
+  Dummy::Application.config.secret_token = '3de56e054bcdc8084c1593be5a466b521c066bacb113c2a8c846918774eb45c5b80dd7adba1c34f2628a858a6002ef61daba311acd97cfb0c2b9477e2446a09b'
+  Dummy::Application.config.session_store :cookie_store, key: '_my_app'
+end
