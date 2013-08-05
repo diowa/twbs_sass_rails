@@ -1,3 +1,17 @@
+# Mac OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
 .bundle/
 log/*.log
 pkg/
@@ -11,3 +25,4 @@ test/dummy/.sass-cache
 # Others
 coverage
 tmp
+.sass-cache
