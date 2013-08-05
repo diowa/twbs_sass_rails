@@ -19,9 +19,9 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.add_dependency 'rails', '>= 3.2.14'
-  s.add_dependency 'therubyracer'
-  s.add_dependency 'less-rails'
+  s.add_runtime_dependency 'rails', '>= 3.2.14'
+  s.add_runtime_dependency 'therubyracer'
+  s.add_runtime_dependency 'less-rails'
 
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'coveralls'
