@@ -9,6 +9,7 @@ class InstallGeneratorTest < ::Rails::Generators::TestCase
   test "Assert all files are properly created" do
     run_generator
     assert_file 'app/assets/stylesheets/application.css'
+    assert_file 'app/assets/stylesheets/twbs-variables.css.less'
     assert_file 'app/assets/stylesheets/twbs.css.less'
     assert_file 'app/assets/javascripts/application.js'
     assert_file 'app/assets/javascripts/twbs.js.coffee'
@@ -17,6 +18,7 @@ class InstallGeneratorTest < ::Rails::Generators::TestCase
   test "Assert existing application.css properly requires bootstrap" do
     copy_default_asset 'application.css', 'stylesheets'
     run_generator
+    assert_file 'app/assets/stylesheets/application.css', /^ \*\= stub twbs-variables$/
     assert_file 'app/assets/stylesheets/application.css', /^ \*\= require twbs$/
   end
 

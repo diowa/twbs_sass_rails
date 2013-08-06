@@ -32,6 +32,16 @@ describe "assets precompile in production environment integration" do
     end
   end
 
+  it "overrides Bootstrap variables" do
+    visit "/assets/#{get_asset_name('application', 'css')}"
+    page.text.must_include 'color: #d10d10;'
+  end
+
+  it "overrides Bootstrap variables in user stylesheets" do
+    visit "/assets/#{get_asset_name('application', 'css')}"
+    page.text.must_include '.test-class { color: #d10d10; }'
+  end
+
   private
   def get_asset_name(asset_name, asset_ext)
     Dir::glob("test/dummy/public/assets/#{asset_name}-*.#{asset_ext}").first.split('/').last
