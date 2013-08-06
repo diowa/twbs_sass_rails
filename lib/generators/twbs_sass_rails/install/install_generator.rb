@@ -15,7 +15,7 @@ module TwbsSassRails
 
         css_manifest = 'app/assets/stylesheets/application.css'
         if File.exist?(File.join(destination_root, css_manifest))
-          insert_into_file css_manifest, " *= require twbs\n", after: "require_self\n"
+          insert_into_file css_manifest, " *= stub twbs-variables\n *= require twbs\n", after: "require_self\n"
         else
           copy_file 'application.css', css_manifest
         end
@@ -23,6 +23,7 @@ module TwbsSassRails
 
       def copy_bootstrap
         copy_file 'twbs.js.coffee', 'app/assets/javascripts/twbs.js.coffee'
+        copy_file 'twbs.css.less', 'app/assets/stylesheets/twbs-variables.css.less'
         copy_file 'twbs.css.less', 'app/assets/stylesheets/twbs.css.less'
       end
     end
