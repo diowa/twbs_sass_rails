@@ -1,6 +1,11 @@
 require 'test_helper'
 
 describe "twbs sass rails integration" do
+  it "does not default to glyphicons" do
+    visit '/assets/default-twbs.css'
+    page.text.wont_include 'glyphicons'
+  end
+
   it "provides bootstrap stylesheet on the asset pipeline" do
     visit '/assets/application.css'
     page.text.must_include '* Bootstrap'
@@ -24,9 +29,9 @@ describe "twbs sass rails integration" do
   end
 
   it "provides glyphicons on the asset pipeline" do
-    visit '/assets/glyphiconshalflings-regular.eot'
-    visit '/assets/glyphiconshalflings-regular.svg'
-    visit '/assets/glyphiconshalflings-regular.ttf'
-    visit '/assets/glyphiconshalflings-regular.woff'
+    visit '/assets/glyphicons-halflings-regular.eot'
+    visit '/assets/glyphicons-halflings-regular.svg'
+    visit '/assets/glyphicons-halflings-regular.ttf'
+    visit '/assets/glyphicons-halflings-regular.woff'
   end
 end

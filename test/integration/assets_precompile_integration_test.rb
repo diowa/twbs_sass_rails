@@ -22,9 +22,9 @@ describe "assets precompile in production environment integration" do
 
   it "provides glyphicons" do
     ['eot', 'svg', 'ttf', 'woff'].each do |fmt|
-      font_file = get_asset_name('glyphiconshalflings-regular', fmt)
+      font_file = get_asset_name('glyphicons-halflings-regular', fmt)
       # NOTE: Rails 3 skips fingerprint when asset has parameters.
-      font_file = 'glyphiconshalflings-regular.svg' if Rails.version.start_with?('3')
+      font_file = 'glyphicons-halflings-regular.svg' if Rails.version.start_with?('3')
       visit "/assets/#{font_file}"
       visit "/assets/#{get_asset_name('application', 'css')}"
       page.text.must_include font_file

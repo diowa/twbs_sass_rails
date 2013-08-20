@@ -27,7 +27,7 @@ $ rails g twbs_sass_rails:install
 Twbs Sass Rails defaults with Font Awesome. If you want to switch to Glyphicons, edit your `twbs.css.less`:
 ```css
 @import "twbs/bootstrap";
-@import "twbs/bootstrap-glyphicons";
+@import "twbs/bootstrap/glyphicons";
 //@import "fontawesome/font-awesome";
 
 /* ... */
