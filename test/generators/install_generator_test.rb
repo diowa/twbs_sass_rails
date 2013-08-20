@@ -9,10 +9,19 @@ class InstallGeneratorTest < ::Rails::Generators::TestCase
   test "Assert all files are properly created" do
     run_generator
     assert_file 'app/assets/stylesheets/application.css'
-    assert_file 'app/assets/stylesheets/twbs-variables.css.less'
-    assert_file 'app/assets/stylesheets/twbs.css.less'
+    assert_file 'app/assets/stylesheets/twbs-variables.css.less' do |file_content|
+      template_file = File.expand_path('../../lib/generators/twbs_sass_rails/install/templates/twbs-variables.css.less', File.dirname(__FILE__))
+      assert_match file_content, File.read(template_file)
+    end
+    assert_file 'app/assets/stylesheets/twbs.css.less' do |file_content|
+      template_file = File.expand_path('../../lib/generators/twbs_sass_rails/install/templates/twbs.css.less', File.dirname(__FILE__))
+      assert_match file_content, File.read(template_file)
+    end
     assert_file 'app/assets/javascripts/application.js'
-    assert_file 'app/assets/javascripts/twbs.js.coffee'
+    assert_file 'app/assets/javascripts/twbs.js.coffee' do |file_content|
+      template_file = File.expand_path('../../lib/generators/twbs_sass_rails/install/templates/twbs.js.coffee', File.dirname(__FILE__))
+      assert_match file_content, File.read(template_file)
+    end
   end
 
   test "Assert existing application.css properly requires bootstrap" do

@@ -29,7 +29,13 @@ Twbs Sass Rails defaults with Font Awesome. If you want to switch to Glyphicons,
 @import "twbs/bootstrap";
 @import "twbs/bootstrap/glyphicons";
 //@import "fontawesome/font-awesome";
+/* ... */
+```
 
+ If you want to use the Bootstrap theme, add it to your `twbs.css.less` just after `@import "twbs/bootstrap";`:
+```css
+@import "twbs/bootstrap";
+@import "twbs/bootstrap/theme";
 /* ... */
 ```
 
@@ -46,7 +52,7 @@ Use `twbs-variables.css.less` to override Bootstrap defaults:
 @brand-primary:         @flat-ui-belize-hole;
 @brand-success:         @flat-ui-nephritis;
 ```
-NOTE: Remember to import `twbs-variables.css.less` instead of `twbs/bootstrap/variables` in each new stylesheet.
+**NOTE**: Remember to import `twbs-variables.css.less` instead of `twbs/bootstrap/variables` in each new stylesheet.
 
 If you want to exclude some css components, remove `@import "twbs/bootstrap";` and add the components you need:
 ```css
@@ -58,7 +64,6 @@ If you want to exclude some css components, remove `@import "twbs/bootstrap";` a
 // Reset
 @import "twbs/bootstrap/normalize";
 @import "twbs/bootstrap/print";
-
 /* ... */
 ```
 
@@ -70,6 +75,7 @@ You can do the same for the javascript counterpart. Remove `//= require twbs/boo
 //= require twbs/bootstrap/alert
 //= require twbs/bootstrap/button
 //= require turbolinks
+
 /* ... */
 ```
 
