@@ -4,3 +4,6 @@
 [submodule "src/twbs/bootstrap"]
 	path = src/twbs/bootstrap
 	url = https://github.com/twbs/bootstrap.git
+[submodule "src/scottjehl/Respond"]
+	path = src/scottjehl/Respond
+	url = https://github.com/scottjehl/Respond.git

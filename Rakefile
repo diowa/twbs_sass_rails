@@ -58,6 +58,9 @@ task :update_assets do
   FileUtils.rm_rf "#{DESTINATION_FOLDERS[:fontawesome_fonts]}/FontAwesome.otf"
   FileUtils.rm_rf "#{DESTINATION_FOLDERS[:fontawesome_stylesheets]}/font-awesome-ie7.less"
 
+  # Adding respond.js
+  FileUtils.cp File.expand_path('src/scottjehl/Respond/respond.src.js'), File.expand_path('vendor/assets/javascripts/respond.js')
+
   # Update font paths
   update_fontawesome_paths
   update_glyphicons_paths
