@@ -78,6 +78,21 @@ If you want to exclude some Javascript components, remove `//= require twbs/boot
 Take a look at [the whole list of Javascript components](/vendor/assets/javascripts/twbs/bootstrap.js). **Respect the order of the files and remember to edit paths**.
 
 
+
+## Testing
+
+To launch the tests against Rails 4, run from the root folder of the repository:
+```bash
+BUNDLE_GEMFILE=$PWD/gemfiles/Gemfile.rails-4.0.x rake
+```
+
+For Rails 3.2 run instead:
+```bash
+BUNDLE_GEMFILE=$PWD/gemfiles/Gemfile.rails-3.2.x rake
+```
+
+
+
 ## Versioning
 
 For transparency and insight into our release cycle, and for striving to maintain backward compatibility, Twbs Sass Rails will be maintained under the Semantic Versioning guidelines as much as possible. Twbs Sass Rails will not follow Bootstrap's version number.

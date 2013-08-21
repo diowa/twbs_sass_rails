@@ -31,8 +31,8 @@ SOURCE_FILES = {
   bootstrap_stylesheets: File.expand_path('src/twbs/bootstrap/less/*.less'),
   bootstrap_javascripts: File.expand_path('src/twbs/bootstrap/js/*.js'),
   fontawesome_stylesheets: File.expand_path('src/FortAwesome/Font-Awesome/less/*.less'),
-  glyphicons_fonts: File.expand_path('src/twbs/bootstrap/fonts/*'),
-  fontawesome_fonts: File.expand_path('src/FortAwesome/Font-Awesome/font/*'),
+  glyphicons_fonts: File.expand_path('src/twbs/bootstrap/fonts/glyphicons-halflings-regular.*'),
+  fontawesome_fonts: File.expand_path('src/FortAwesome/Font-Awesome/font/fontawesome-webfont.*'),
 }
 
 DESTINATION_FOLDERS = {
@@ -45,28 +45,29 @@ DESTINATION_FOLDERS = {
 
 desc "Update assets"
 task :update_assets do
-  # Update submodules
-  `git submodule update`
+  puts 'Updating submodules...'
+  `git submodule foreach git pull`
 
-  # Prepare destination folders
+  puts 'Preparing destination folders...'
   remove_content_from_destination_folders
 
-  # Copy new assets
+  puts 'Copying new assets...'
   copy_source_files_to_destination_folders
 
-  # Remove unneeded assets
-  FileUtils.rm_rf "#{DESTINATION_FOLDERS[:fontawesome_fonts]}/FontAwesome.otf"
+  puts 'Removing unneeded assets...'
   FileUtils.rm_rf "#{DESTINATION_FOLDERS[:fontawesome_stylesheets]}/font-awesome-ie7.less"
 
-  # Adding respond.js
+  puts 'Adding respond.js...'
   FileUtils.cp File.expand_path('src/scottjehl/Respond/respond.src.js'), File.expand_path('vendor/assets/javascripts/respond.js')
 
-  # Update font paths
+  puts 'Updating font paths...'
   update_fontawesome_paths
   update_glyphicons_paths
 
-  # Disabling glyphicons from default components
+  puts 'Disabling glyphicons...'
   disable_glyphicons
+
+  puts 'DONE! Run the tests now.'
 end
 
 def remove_content_from_destination_folders
@@ -101,6 +102,6 @@ end
 def disable_glyphicons
   file_name = "#{DESTINATION_FOLDERS[:bootstrap_stylesheets]}/bootstrap.less"
   text = File.read(file_name)
-  text.gsub! '@import "glyphicons.less";', ''
+  text.gsub! "@import \"glyphicons.less\";\n", ''
   File.open(file_name, 'w') { |file| file.puts text }
 end
