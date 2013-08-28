@@ -46,7 +46,8 @@ DESTINATION_FOLDERS = {
 desc "Update assets"
 task :update_assets do
   puts 'Updating submodules...'
-  `git submodule foreach git pull`
+  `git submodule update --init`
+  `git submodule foreach git pull origin master`
 
   puts 'Preparing destination folders...'
   remove_content_from_destination_folders
@@ -67,7 +68,7 @@ task :update_assets do
   puts 'Disabling glyphicons...'
   disable_glyphicons
 
-  puts 'DONE! Run the tests now.'
+  puts 'Done. RUN TESTS NOW!'
 end
 
 def remove_content_from_destination_folders
