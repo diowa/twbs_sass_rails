@@ -24,15 +24,7 @@ $ rails g twbs_sass_rails:install
 
 ## Customization
 
-Twbs Sass Rails defaults with Font Awesome. If you want to switch to Glyphicons, edit your `twbs.css.less`:
-```css
-@import "twbs/bootstrap";
-@import "twbs/bootstrap-glyphicons";
-//@import "fontawesome/font-awesome";
-
-/* ... */
-```
-
+### Variables
 Use `twbs-variables.css.less` to override Bootstrap defaults:
 ```css
 /* New variables */
@@ -46,11 +38,21 @@ Use `twbs-variables.css.less` to override Bootstrap defaults:
 @brand-primary:         @flat-ui-belize-hole;
 @brand-success:         @flat-ui-nephritis;
 ```
-NOTE: Remember to import `twbs-variables.css.less` instead of `twbs/bootstrap/variables` in each new stylesheet.
+**NOTE**: Remember to import `twbs-variables.css.less` instead of `twbs/bootstrap/variables` in any new LESS file.
 
-If you want to exclude some css components, remove `@import "twbs/bootstrap";` and add the components you need:
+### Icon Font
+Twbs Sass Rails defaults with Font Awesome. If you want to switch to Glyphicons, edit your `twbs.css.less` as the following:
 ```css
-/* Customization Example */
+@import "twbs/bootstrap/glyphicons";
+//@import "fontawesome/font-awesome";
+```
+
+### Bootstrap theme
+If you want to use the [Bootstrap theme](http://getbootstrap.com/examples/theme/), uncomment `//@import "twbs/bootstrap/theme"` in your `twbs.css.less`.
+
+### Custom LESS components
+If you want to exclude some LESS components, remove `@import "twbs/bootstrap";` from your `twbs.css.less` and add the components you need, e.g.:
+```css
 // Core variables and mixins
 @import "twbs/bootstrap/variables";
 @import "twbs/bootstrap/mixins";
@@ -58,19 +60,35 @@ If you want to exclude some css components, remove `@import "twbs/bootstrap";` a
 // Reset
 @import "twbs/bootstrap/normalize";
 @import "twbs/bootstrap/print";
-
 /* ... */
 ```
+Take a look at [the whole list of LESS components](/vendor/assets/stylesheets/twbs/bootstrap/bootstrap.less). **Respect the order of the files and remember to edit paths**.
 
-You can do the same for the javascript counterpart. Remove `//= require twbs/bootstrap` and add the components you need:
+### Custom Javascript components
+If you want to exclude some Javascript components, remove `//= require twbs/bootstrap` from `twbs.js.coffee` and add the components you need, e.g:
 ```js
-/* Customization Example */
+/* ... */
 //= require jquery_ujs
 //= require twbs/bootstrap/transition
 //= require twbs/bootstrap/alert
 //= require twbs/bootstrap/button
 //= require turbolinks
 /* ... */
+```
+Take a look at [the whole list of Javascript components](/vendor/assets/javascripts/twbs/bootstrap.js). **Respect the order of the files and remember to edit paths**.
+
+
+
+## Testing
+
+To launch the tests against Rails 4, run from the root folder of the repository:
+```bash
+BUNDLE_GEMFILE=$PWD/gemfiles/Gemfile.rails-4.0.x rake
+```
+
+For Rails 3.2 run instead:
+```bash
+BUNDLE_GEMFILE=$PWD/gemfiles/Gemfile.rails-3.2.x rake
 ```
 
 
