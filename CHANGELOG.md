@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.2.0
+-----
+* Bootstrap 3.0 @ [31dfc3218e](https://github.com/twbs/bootstrap/commit/31dfc3218e4aafca3a3963a632a22ee018362c00)
+
 0.1.0
 -----
 * Bootstrap 3.0 @ [73f10843a4](https://github.com/twbs/bootstrap/commit/73f10843a487ee94bed755ecfd7c853cb657bf38)

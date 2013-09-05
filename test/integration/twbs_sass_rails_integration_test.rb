@@ -3,7 +3,7 @@ require 'test_helper'
 describe "twbs sass rails integration" do
   it "does not default to glyphicons" do
     visit '/assets/default-twbs.css'
-    page.text.wont_include 'glyphicons'
+    page.text.wont_include 'Glyphicons Halflings'
   end
 
   it "provides bootstrap stylesheet on the asset pipeline" do
