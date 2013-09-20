@@ -27,3 +27,4 @@ coverage
 tmp
 .sass-cache
 gemfiles/*.lock
+*.gem
