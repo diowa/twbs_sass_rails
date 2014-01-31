@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1
+
+* Fixed dependencies
+
 ## 0.3.0
 
 * bootstrap-sass 3.1.0
