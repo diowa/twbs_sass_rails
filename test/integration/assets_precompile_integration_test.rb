@@ -4,11 +4,11 @@ describe "assets precompile in production environment integration" do
   FileUtils::rm_rf 'test/dummy/public/assets'
   system 'cd test/dummy && RAILS_ENV=production rake assets:precompile'
 
-  it "provides respond.js" do
+  it "provides Respond.js" do
     visit "/assets/#{get_asset_name('respond','js')}"
   end
 
-  it "provides fontawesome" do
+  it "provides Font Awesome" do
     ['eot', 'svg', 'ttf', 'woff'].each do |fmt|
       font_file = get_asset_name('fontawesome-webfont', fmt)
       # NOTE: Rails 3 skips fingerprint when asset has parameters.
@@ -20,7 +20,7 @@ describe "assets precompile in production environment integration" do
     end
   end
 
-  it "provides glyphicons" do
+  it "provides Glyphicons" do
     ['eot', 'svg', 'ttf', 'woff'].each do |fmt|
       font_file = get_asset_name('glyphicons-halflings-regular', fmt)
       # NOTE: Rails 3 skips fingerprint when asset has parameters.
@@ -34,12 +34,18 @@ describe "assets precompile in production environment integration" do
 
   it "overrides Bootstrap variables" do
     visit "/assets/#{get_asset_name('application', 'css')}"
-    page.text.must_include 'color: #d10d10;'
+    color = Rails.version.start_with?('3') ? 'color: #d10d10;' : 'color:#d10d10'
+    hover_color = Rails.version.start_with?('3') ? 'color: #89090a;' : 'color:#89090a'
+    page.text.must_include color
+    page.text.must_include hover_color # automatically generated hover
   end
 
   it "overrides Bootstrap variables in user stylesheets" do
     visit "/assets/#{get_asset_name('application', 'css')}"
-    page.text.must_include '.test-class { color: #d10d10; }'
+    test_class = Rails.version.start_with?('3') ? '.test-class { color: #d10d10; }' : '.test-class{color:#d10d10}'
+    test_hover_class = Rails.version.start_with?('3') ? '.test-hover-class { color: #89090a; }' : '.test-hover-class{color:#89090a}'
+    page.text.must_include test_class
+    page.text.must_include test_hover_class
   end
 
   private

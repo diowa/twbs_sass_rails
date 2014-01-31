@@ -23,8 +23,8 @@ module TwbsSassRails
 
       def copy_bootstrap
         copy_file 'twbs.js.coffee', 'app/assets/javascripts/twbs.js.coffee'
-        copy_file 'twbs-variables.css.less', 'app/assets/stylesheets/twbs-variables.css.less'
-        copy_file 'twbs.css.less', 'app/assets/stylesheets/twbs.css.less'
+        copy_file 'twbs-variables.css.scss', 'app/assets/stylesheets/twbs-variables.css.scss'
+        copy_file 'twbs.css.scss', 'app/assets/stylesheets/twbs.css.scss'
       end
     end
   end
