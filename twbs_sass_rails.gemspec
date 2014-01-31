@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_runtime_dependency 'rails', '>= 3.2.16'
-  s.add_runtime_dependency 'therubyracer'
+  s.add_runtime_dependency 'sass-rails', '>= 3.2'
 
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'coveralls'
