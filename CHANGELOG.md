@@ -3,6 +3,8 @@
 ## 0.3.0
 
 * bootstrap-sass 3.1.0
+* FontAwesome 4.0.3
+* Respond.js 1.4.2
 
 ## 0.2.0
 
