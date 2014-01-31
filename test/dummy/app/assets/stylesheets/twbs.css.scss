@@ -8,7 +8,7 @@
 @import "fontawesome/font-awesome";
 
 /* Use twbs-variables to define new variables and override Bootstrap defaults.
- * Import "twbs-variables.css.less" instead of "twbs/bootstrap/variables"
+ * Import "twbs-variables" instead of "twbs/bootstrap/variables"
  * in each new stylesheet.
  */
-@import "twbs-variables.css.less";
+@import "twbs-variables";
