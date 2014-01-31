@@ -1,10 +1,11 @@
 # Twbs Sass Rails
+[![Gem Version](https://badge.fury.io/rb/twbs_sass_rails.png)](http://badge.fury.io/rb/twbs_sass_rails)
 [![Build Status](https://secure.travis-ci.org/diowa/twbs_sass_rails.png?branch=master)](https://travis-ci.org/diowa/twbs_sass_rails)
 [![Dependency Status](https://gemnasium.com/diowa/twbs_sass_rails.png)](https://gemnasium.com/diowa/twbs_sass_rails)
 [![Code Climate](https://codeclimate.com/github/diowa/twbs_sass_rails.png)](https://codeclimate.com/github/diowa/twbs_sass_rails)
 [![Coverage Status](https://coveralls.io/repos/diowa/twbs_sass_rails/badge.png?branch=master)](https://coveralls.io/r/diowa/twbs_sass_rails)
 
-Brings [Bootstrap](http://getbootstrap.com/) and [Font Awesome](http://fontawesome.io) assets into your Rails application. **In Less, at the moment.**
+Brings [Bootstrap](http://getbootstrap.com/) and [Font Awesome](http://fontawesome.io) assets into your Rails application.
 
 
 
@@ -40,17 +41,25 @@ Use `twbs-variables.css.less` to override Bootstrap defaults:
 ```
 **NOTE**: Remember to import `twbs-variables.css.less` instead of `twbs/bootstrap/variables` in any new LESS file.
 
-### Icon Font
-Twbs Sass Rails defaults with Font Awesome. If you want to switch to Glyphicons, edit your `twbs.css.less` as the following:
+### Glyphs
+Twbs Sass Rails comes with Glyphicons and Fontawesome, both disabled by default. Edit your `twbs.css.less` to enable them.
+
+Use Glyphicons:
 ```css
 @import "twbs/bootstrap/glyphicons";
 //@import "fontawesome/font-awesome";
 ```
 
+Use FontAwesome:
+```css
+//@import "twbs/bootstrap/glyphicons";
+@import "fontawesome/font-awesome";
+```
+
 ### Bootstrap theme
 If you want to use the [Bootstrap theme](http://getbootstrap.com/examples/theme/), uncomment `//@import "twbs/bootstrap/theme"` in your `twbs.css.less`.
 
-### Custom LESS components
+### Customize LESS components
 If you want to exclude some LESS components, remove `@import "twbs/bootstrap";` from your `twbs.css.less` and add the components you need, e.g.:
 ```css
 // Core variables and mixins
@@ -64,7 +73,7 @@ If you want to exclude some LESS components, remove `@import "twbs/bootstrap";` 
 ```
 Take a look at [the whole list of LESS components](/vendor/assets/stylesheets/twbs/bootstrap/bootstrap.less). **Respect the order of the files and remember to edit paths**.
 
-### Custom Javascript components
+### Customize Javascript components
 If you want to exclude some Javascript components, remove `//= require twbs/bootstrap` from `twbs.js.coffee` and add the components you need, e.g:
 ```js
 /* ... */
@@ -90,6 +99,16 @@ For Rails 3.2 run instead:
 ```bash
 BUNDLE_GEMFILE=$PWD/gemfiles/Gemfile.rails-3.2.x rake
 ```
+
+
+
+## Contributing
+
+Please read through our [contributing guidelines](CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+
+More over, if your pull request contains patches or features, you must include relevant unit tests.
+
+Editor preferences are available in the [editor config](.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.
 
 
 
@@ -127,9 +146,9 @@ For more information on SemVer, please visit [http://semver.org/](http://semver.
 
 ## Copyright and license
 
-Copyright 2013 diowa under [the BSD 2-Clause license](LICENSE).
+Copyright 2014 diowa under [the BSD 2-Clause license](LICENSE).
 
-Twitter Bootstrap is licensed under the Apache License, Version 2.0
+Twitter Bootstrap is licensed under the MIT License
 
 Font Awesome is licensed under the MIT License
 
