@@ -9,7 +9,7 @@ describe "twbs sass rails integration" do
 
   it "provides Bootstrap stylesheets on the asset pipeline" do
     visit '/assets/application.css'
-    page.text.must_include '* Bootstrap'
+    page.text.must_include 'MIT License'
   end
 
   it "provides Bootstrap javscripts on the asset pipeline" do

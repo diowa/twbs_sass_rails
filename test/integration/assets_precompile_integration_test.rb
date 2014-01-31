@@ -34,14 +34,18 @@ describe "assets precompile in production environment integration" do
 
   it "overrides Bootstrap variables" do
     visit "/assets/#{get_asset_name('application', 'css')}"
-    page.text.must_include 'color: #d10d10;'
-    page.text.must_include 'color: #89090a;' # automatically generated hover
+    color = Rails.version.start_with?('3') ? 'color: #d10d10;' : 'color:#d10d10'
+    hover_color = Rails.version.start_with?('3') ? 'color: #89090a;' : 'color:#89090a'
+    page.text.must_include color
+    page.text.must_include hover_color # automatically generated hover
   end
 
   it "overrides Bootstrap variables in user stylesheets" do
     visit "/assets/#{get_asset_name('application', 'css')}"
-    page.text.must_include '.test-class { color: #d10d10; }'
-    page.text.must_include '.test-hover-class { color: #89090a; }'
+    test_class = Rails.version.start_with?('3') ? '.test-class { color: #d10d10; }' : '.test-class{color:#d10d10}'
+    test_hover_class = Rails.version.start_with?('3') ? '.test-hover-class { color: #89090a; }' : '.test-hover-class{color:#89090a}'
+    page.text.must_include test_class
+    page.text.must_include test_hover_class
   end
 
   private

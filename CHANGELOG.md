@@ -2,6 +2,8 @@
 
 ## 0.3.0
 
+* bootstrap-sass 3.1.0
+
 ## 0.2.0
 
 * Bootstrap 3.0 @ [31dfc3218e](https://github.com/twbs/bootstrap/commit/31dfc3218e4aafca3a3963a632a22ee018362c00)

@@ -5,7 +5,7 @@
 [![Code Climate](https://codeclimate.com/github/diowa/twbs_sass_rails.png)](https://codeclimate.com/github/diowa/twbs_sass_rails)
 [![Coverage Status](https://coveralls.io/repos/diowa/twbs_sass_rails/badge.png?branch=master)](https://coveralls.io/r/diowa/twbs_sass_rails)
 
-Brings [Bootstrap](http://getbootstrap.com/) and [Font Awesome](http://fontawesome.io) assets into your Rails application.
+Brings [Bootstrap for Sass](http://getbootstrap.com/) and [Font Awesome](http://fontawesome.io) assets into your Rails application.
 
 
 
@@ -26,23 +26,27 @@ $ rails g twbs_sass_rails:install
 ## Customization
 
 ### Variables
-Use `twbs-variables.css.less` to override Bootstrap defaults:
+Use `twbs-variables.css.scss` to override Bootstrap defaults:
 ```css
 /* New variables */
-@flat-ui-emerald:       #2ecc71;
-@flat-ui-nephritis:     #27ae60;
+$flat-ui-emerald:       #2ecc71;
+$flat-ui-nephritis:     #27ae60;
 
-@flat-ui-peter-river:   #3498db;
-@flat-ui-belize-hole:   #2980b9;
+$flat-ui-peter-river:   #3498db;
+$flat-ui-belize-hole:   #2980b9;
 
 /* Overrides */
-@brand-primary:         @flat-ui-belize-hole;
-@brand-success:         @flat-ui-nephritis;
+$brand-primary:         @flat-ui-belize-hole;
+$brand-success:         @flat-ui-nephritis;
+
+/* Do not edit below this line */
+@import "twbs/bootstrap/variables";
 ```
-**NOTE**: Remember to import `twbs-variables.css.less` instead of `twbs/bootstrap/variables` in any new LESS file.
+**NOTE**: Remember to import `twbs-variables` instead of `twbs/bootstrap/variables` in any new SCSS file.
+**WARNING**: Leave `@import "twbs/bootstrap/variables";` at the very end of the file.
 
 ### Glyphs
-Twbs Sass Rails comes with Glyphicons and Fontawesome, both disabled by default. Edit your `twbs.css.less` to enable them.
+Twbs Sass Rails comes with Glyphicons and Fontawesome, both disabled by default. Edit your `twbs.css.scss` to enable them.
 
 Use Glyphicons:
 ```css
@@ -57,11 +61,18 @@ Use FontAwesome:
 ```
 
 ### Bootstrap theme
-If you want to use the [Bootstrap theme](http://getbootstrap.com/examples/theme/), uncomment `//@import "twbs/bootstrap/theme"` in your `twbs.css.less`.
+If you want to use the [Bootstrap theme](http://getbootstrap.com/examples/theme/), uncomment `//@import "twbs/bootstrap/theme"` in your `twbs.css.scss`.
 
-### Customize LESS components
-If you want to exclude some LESS components, remove `@import "twbs/bootstrap";` from your `twbs.css.less` and add the components you need, e.g.:
+### Customize SCSS components
+If you want to exclude some SCSS components, remove `@import "twbs/bootstrap";` from your `twbs.css.scss` and add the components you need, e.g.:
 ```css
+/* Use twbs-variables to define new variables and override Bootstrap defaults.
+ * Import "twbs-variables" instead of "twbs/bootstrap/variables"
+ * in each new stylesheet.
+ */
+@import "twbs-variables";
+
+/* Start editing below this line */
 // Core variables and mixins
 @import "twbs/bootstrap/variables";
 @import "twbs/bootstrap/mixins";
@@ -71,7 +82,7 @@ If you want to exclude some LESS components, remove `@import "twbs/bootstrap";` 
 @import "twbs/bootstrap/print";
 /* ... */
 ```
-Take a look at [the whole list of LESS components](/vendor/assets/stylesheets/twbs/bootstrap/bootstrap.less). **Respect the order of the files and remember to edit paths**.
+Take a look at [the whole list of SCSS components](/vendor/assets/stylesheets/twbs/bootstrap/bootstrap.scss). **Respect the order of the files and remember to edit paths**.
 
 ### Customize Javascript components
 If you want to exclude some Javascript components, remove `//= require twbs/bootstrap` from `twbs.js.coffee` and add the components you need, e.g:
@@ -148,7 +159,7 @@ For more information on SemVer, please visit [http://semver.org/](http://semver.
 
 Copyright 2014 diowa under [the BSD 2-Clause license](LICENSE).
 
-Twitter Bootstrap is licensed under the MIT License
+bootstrap-sass is licensed under the MIT License
 
 Font Awesome is licensed under the MIT License
 
