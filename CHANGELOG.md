@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0
+
+* bootstrap-sass 3.1.0+2
+* Respond.js 1.4.2 @ [3fde262748](https://github.com/scottjehl/Respond/commit/3fde2627484f8cb38e2bd4dbf2374cf41184b0f4)
+* Updated readme
+
 ## 0.3.1
 
 * Fixed dependencies
