@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2
+
+* Fixed submodules
+
 ## 0.4.1
 
 * Fixed submodules
