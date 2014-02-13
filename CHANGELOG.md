@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0
+
+* bootstrap-sass v3.1.1
+
 ## 0.4.2
 
 * Fixed submodules
