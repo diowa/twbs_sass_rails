@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.add_runtime_dependency 'rails', '>= 3.2.16'
+  s.add_runtime_dependency 'rails', '>= 3.2.17'
   s.add_runtime_dependency 'sass-rails', '>= 3.2'
 
   s.add_development_dependency 'capybara'
