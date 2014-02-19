@@ -5,4 +5,5 @@ gemspec path: '../'
 # Dummy application dependencies
 gem 'rails', '3.2.17'
 gem 'uglifier'
-gem 'sass-rails',   '~> 3.2.3'
+gem 'sass-rails', '~> 3.2.3'
+gem 'minitest', '~> 4'
