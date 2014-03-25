@@ -5,6 +5,7 @@
 * Support for Rails 4.1.0.rc1
 * Support for Ruby 2.1.1
 * Added style for standard Rails form errors
+* Fixed Sass precision
 
 ## 0.5.1
 
