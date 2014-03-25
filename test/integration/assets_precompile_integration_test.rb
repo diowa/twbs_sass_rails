@@ -1,6 +1,7 @@
 require 'test_helper'
 
 describe "assets precompile in production environment integration" do
+  FileUtils::rm_rf 'test/dummy/public/assets'
   system 'cd test/dummy && RAILS_ENV=production rake assets:clean assets:precompile'
 
   it "provides Respond.js" do
