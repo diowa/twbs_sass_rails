@@ -18,10 +18,11 @@ Rails.backtrace_cleaner.remove_silencers!
 
 require 'capybara/rails'
 
-require 'turn'
-Turn.config.format = :cool
-Turn.config.natural = true
-Turn.config.verbose = true
+# Turn doesn't support MiniTest 5
+# require 'turn'
+# Turn.config.format = :cool
+# Turn.config.natural = true
+# Turn.config.verbose = true
 
 # Load support files
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }

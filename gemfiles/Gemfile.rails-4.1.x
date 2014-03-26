@@ -3,7 +3,7 @@ source "https://rubygems.org"
 gemspec path: '../'
 
 # Dummy application dependencies
-gem 'rails', '3.2.17'
+gem 'rails', '4.1.0.rc2'
 gem 'uglifier'
-gem 'sass-rails', '~> 3.2.3'
-gem 'minitest', '~> 4'
+gem 'sass-rails', '~> 4.0.0'
+gem 'minitest', '~> 5'
