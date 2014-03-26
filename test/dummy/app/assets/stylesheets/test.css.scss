@@ -7,3 +7,7 @@
 .test-hover-class {
   color: $link-hover-color;
 }
+
+.test-precision {
+  line-height: (1em / 9);
+}

@@ -2,7 +2,7 @@ require 'test_helper'
 
 describe "assets precompile in production environment integration" do
   FileUtils::rm_rf 'test/dummy/public/assets'
-  system 'cd test/dummy && RAILS_ENV=production rake assets:precompile'
+  system 'cd test/dummy && RAILS_ENV=production rake assets:clean assets:precompile'
 
   it "provides Respond.js" do
     visit "/assets/#{get_asset_name('respond','js')}"
@@ -46,6 +46,11 @@ describe "assets precompile in production environment integration" do
     test_hover_class = Rails.version.start_with?('3') ? '.test-hover-class { color: #89090a; }' : '.test-hover-class{color:#89090a}'
     page.text.must_include test_class
     page.text.must_include test_hover_class
+  end
+
+  it "sets Sass precision to 10" do
+    visit "/assets/#{get_asset_name('application', 'css')}"
+    page.text.must_include '0.1111111111em'
   end
 
   private
