@@ -65,7 +65,7 @@ If you want to use the [Bootstrap theme](http://getbootstrap.com/examples/theme/
 
 ### Customize SCSS components
 If you want to exclude some SCSS components, remove `@import "twbs/bootstrap";` from your `twbs.css.scss` and add the components you need, e.g.:
-```css
+```scss
 /* Use twbs-variables to define new variables and override Bootstrap defaults.
  * Import "twbs-variables" instead of "twbs/bootstrap/variables"
  * in each new stylesheet.
