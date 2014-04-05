@@ -27,7 +27,7 @@ $ rails g twbs_sass_rails:install
 
 ### Variables
 Use `twbs-variables.css.scss` to override Bootstrap defaults:
-```css
+```scss
 /* New variables */
 $flat-ui-emerald:       #2ecc71;
 $flat-ui-nephritis:     #27ae60;
@@ -36,8 +36,8 @@ $flat-ui-peter-river:   #3498db;
 $flat-ui-belize-hole:   #2980b9;
 
 /* Overrides */
-$brand-primary:         @flat-ui-belize-hole;
-$brand-success:         @flat-ui-nephritis;
+$brand-primary:         $flat-ui-belize-hole;
+$brand-success:         $flat-ui-nephritis;
 
 /* Do not edit below this line */
 @import "twbs/bootstrap/variables";
@@ -49,13 +49,13 @@ $brand-success:         @flat-ui-nephritis;
 Twbs Sass Rails comes with Glyphicons and Fontawesome, both disabled by default. Edit your `twbs.css.scss` to enable them.
 
 Use Glyphicons:
-```css
+```scss
 @import "twbs/bootstrap/glyphicons";
 //@import "fontawesome/font-awesome";
 ```
 
 Use FontAwesome:
-```css
+```scss
 //@import "twbs/bootstrap/glyphicons";
 @import "fontawesome/font-awesome";
 ```
@@ -65,7 +65,7 @@ If you want to use the [Bootstrap theme](http://getbootstrap.com/examples/theme/
 
 ### Customize SCSS components
 If you want to exclude some SCSS components, remove `@import "twbs/bootstrap";` from your `twbs.css.scss` and add the components you need, e.g.:
-```css
+```scss
 /* Use twbs-variables to define new variables and override Bootstrap defaults.
  * Import "twbs-variables" instead of "twbs/bootstrap/variables"
  * in each new stylesheet.

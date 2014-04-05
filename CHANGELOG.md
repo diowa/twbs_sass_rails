@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.1
+
+* Fixed README
+
 ## 0.6.0
 
 * Support for Rails 4.1.0.rc2
