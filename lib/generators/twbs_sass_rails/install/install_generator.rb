@@ -15,7 +15,7 @@ module TwbsSassRails
 
         css_manifest = 'app/assets/stylesheets/application.css'
         if File.exist?(File.join(destination_root, css_manifest))
-          insert_into_file css_manifest, " *= stub twbs-variables\n *= require twbs\n", after: "require_self\n"
+          insert_into_file css_manifest, " *= stub twbs-variables\n *= require twbs\n", before: " *= require_tree .\n"
         else
           copy_file 'application.css', css_manifest
         end
