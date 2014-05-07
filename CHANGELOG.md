@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.3
+
+* Updated Rails dependencies
+
 ## 0.6.2
 
 * Fixed generator for Rails 4. Please check that `twbs.scss` is required before `require_tree .` in your `application.css`
