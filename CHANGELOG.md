@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.4
+
+* Added Gemfile.lock to .gitignore
+
 ## 0.6.3
 
 * Updated Rails dependencies
