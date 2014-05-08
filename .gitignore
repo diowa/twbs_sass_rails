@@ -26,5 +26,6 @@ test/dummy/.sass-cache
 coverage
 tmp
 .sass-cache
+Gemfile.lock
 gemfiles/*.lock
 *.gem
