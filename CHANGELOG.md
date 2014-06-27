@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.0
+
+* bootstrap-sass 3.2.0
+* Fontawesome 4.1.0
+* Support for Rails 4.1.2 and 4.0.6
+
 ## 0.6.4
 
 * Added Gemfile.lock to .gitignore

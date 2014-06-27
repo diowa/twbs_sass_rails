@@ -46,15 +46,17 @@ SUBMODULES = {
 }
 
 SOURCE_FILES = {
-  bootstrap_stylesheets: File.expand_path('src/twbs/bootstrap-sass/vendor/assets/stylesheets/bootstrap/*.scss'),
-  bootstrap_javascripts: File.expand_path('src/twbs/bootstrap-sass/vendor/assets/javascripts/bootstrap/*.js'),
+  bootstrap_stylesheets: File.expand_path('src/twbs/bootstrap-sass/assets/stylesheets/bootstrap/*.scss'),
+  bootstrap_stylesheets_mixins: File.expand_path('src/twbs/bootstrap-sass/assets/stylesheets/bootstrap/mixins/*.scss'),
+  bootstrap_javascripts: File.expand_path('src/twbs/bootstrap-sass/assets/javascripts/bootstrap/*.js'),
   fontawesome_stylesheets: File.expand_path('src/FortAwesome/Font-Awesome/scss/*.scss'),
-  glyphicons_fonts: File.expand_path('src/twbs/bootstrap-sass/vendor/assets/fonts/bootstrap/glyphicons-halflings-regular.*'),
+  glyphicons_fonts: File.expand_path('src/twbs/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.*'),
   fontawesome_fonts: File.expand_path('src/FortAwesome/Font-Awesome/fonts/fontawesome-webfont.*'),
 }
 
 DESTINATION_FOLDERS = {
   bootstrap_stylesheets: File.expand_path('vendor/assets/stylesheets/twbs/bootstrap'),
+  bootstrap_stylesheets_mixins: File.expand_path('vendor/assets/stylesheets/twbs/bootstrap/mixins'),
   bootstrap_javascripts: File.expand_path('vendor/assets/javascripts/twbs/bootstrap'),
   fontawesome_stylesheets: File.expand_path('vendor/assets/stylesheets/fontawesome'),
   glyphicons_fonts: File.expand_path('app/assets/fonts'),
@@ -88,6 +90,9 @@ namespace :update do
     puts 'Adding respond.js...'
     FileUtils.cp File.expand_path('src/scottjehl/Respond/src/respond.js'), File.expand_path('vendor/assets/javascripts/respond.js')
 
+    puts 'Importing bootstrap-sprockets.js'
+    FileUtils.cp File.expand_path('src/twbs/bootstrap-sass/assets/javascripts/bootstrap-sprockets.js'), File.expand_path('vendor/assets/javascripts/twbs/bootstrap.js')
+
     puts 'Updating font paths...'
     update_fontawesome_paths
     update_glyphicons_paths
@@ -114,6 +119,7 @@ end
 
 def copy_source_files_to_destination_folders
   SOURCE_FILES.each do |k, v|
+    FileUtils.mkdir_p DESTINATION_FOLDERS[k] unless File.directory?(DESTINATION_FOLDERS[k])
     FileUtils.cp Dir.glob(v), DESTINATION_FOLDERS[k]
   end
 end
@@ -132,6 +138,7 @@ def update_glyphicons_paths
   file_name = "#{DESTINATION_FOLDERS[:bootstrap_stylesheets]}/_glyphicons.scss"
   text = File.read(file_name)
   text.gsub! /url\(if.*\#\{\$icon-font-name\}\.(.*)\)\)(.*)/, "font-url('\#{$icon-font-name}.\\1)\\2"
+  text.gsub! /\/\/= depend_on.*\n/, ''
   File.open(file_name, 'w') { |file| file.puts text }
 end
 
