@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.1
+
+* Updated Rails dependencies
+
 ## 0.7.0
 
 * bootstrap-sass 3.2.0
