@@ -23,6 +23,22 @@ $ rails g twbs_sass_rails:install
 
 
 
+#### Rails 3.2.x
+
+Rails 3.2 is [no longer maintained for bugfixes](http://guides.rubyonrails.org/maintenance_policy.html), and you should upgrade as soon as possible.
+
+Starting with bootstrap-sass v3.1.1.1, due to the structural changes from upstream you will need these
+backported asset pipeline gems on Rails 3.2. There is more on why this is necessary in
+https://github.com/twbs/bootstrap-sass/issues/523 and https://github.com/twbs/bootstrap-sass/issues/578.
+
+```ruby
+gem 'sprockets-rails', '=2.0.0.backport1'
+gem 'sprockets', '=2.2.2.backport2'
+gem 'sass-rails', github: 'guilleiguaran/sass-rails', branch: 'backport'
+```
+
+
+
 ## Customization
 
 ### Variables
