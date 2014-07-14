@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.2
+
+* Added Rails 3.2.x instruction to Readme
+* Improved specs
+
 ## 0.7.1
 
 * Updated Rails dependencies
