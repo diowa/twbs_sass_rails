@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.1
+
+* Fixed rake task
+* Fixed bootstrap-sass submodule
+
 ## 0.8.0
 
 * bootstrap-sass 3.2.0+1

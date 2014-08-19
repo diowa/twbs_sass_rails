@@ -108,7 +108,7 @@ private
 def update_submodule(submodule, tag)
   return unless tag
   puts "Updating #{submodule[:name]} at #{tag}..."
-  `cd #{submodule[:folder]} && exec git pull origin #{tag}`
+  `cd #{submodule[:folder]} && git fetch && git fetch --tags && git checkout #{tag}`
 end
 
 def remove_content_from_destination_folders
