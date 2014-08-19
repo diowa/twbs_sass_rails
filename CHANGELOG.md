@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.3
+
+* Tested against Rails 4.0.9 and 4.1.5
+* Bumped up version
+
 ## 0.7.2
 
 * Added Rails 3.2.x instruction to Readme
