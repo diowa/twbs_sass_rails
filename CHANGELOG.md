@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.0
+
+* bootstrap-sass 3.2.0+1
+
 ## 0.7.3
 
 * Tested against Rails 4.0.9 and 4.1.5
