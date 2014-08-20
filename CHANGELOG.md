@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.2
+
+* Updated badges
+
 ## 0.8.1
 
 * Fixed rake task
