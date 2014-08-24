@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.9.0
+
+* Automatically requires `sass-rails`
+* Updated Rails and Sass dependencies
+* Using Appraisal to run tests
+
 ## 0.8.2
 
 * Updated badges
