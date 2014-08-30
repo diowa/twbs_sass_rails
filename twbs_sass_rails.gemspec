@@ -19,13 +19,13 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.add_runtime_dependency 'rails', '>= 3.2.19'
-  s.add_runtime_dependency 'sass-rails', '>= 4.0.0'
+  s.add_runtime_dependency 'rails', '>= 3.2.19', '< 5.0.0'
+  s.add_runtime_dependency 'sass-rails', '~> 4'
 
-  s.add_development_dependency 'appraisal'
-  s.add_development_dependency 'capybara'
-  s.add_development_dependency 'coveralls'
-  s.add_development_dependency 'minitest'
-  s.add_development_dependency 'rake'
-  s.add_development_dependency 'simplecov'
+  s.add_development_dependency 'appraisal', '~> 1'
+  s.add_development_dependency 'capybara', '~> 2'
+  s.add_development_dependency 'coveralls', '~> 0.7'
+  s.add_development_dependency 'minitest', '>= 4', '<= 5'
+  s.add_development_dependency 'rake', '~> 10'
+  s.add_development_dependency 'simplecov', '~> 0.9'
 end

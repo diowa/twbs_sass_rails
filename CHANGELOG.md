@@ -5,6 +5,7 @@
 * Font Awesome 4.2.0
 * Automatically requires `sass-rails`
 * Updated Rails and Sass dependencies
+* Removed open-ended dependencies
 * Using Appraisal to run tests
 
 ## 0.8.2
