@@ -46,21 +46,25 @@ SUBMODULES = {
 }
 
 SOURCE_FILES = {
+  bootstrap_main_stylesheets: File.expand_path('src/twbs/bootstrap-sass/assets/stylesheets/_bootstrap.scss'),
   bootstrap_stylesheets: File.expand_path('src/twbs/bootstrap-sass/assets/stylesheets/bootstrap/*.scss'),
   bootstrap_stylesheets_mixins: File.expand_path('src/twbs/bootstrap-sass/assets/stylesheets/bootstrap/mixins/*.scss'),
   bootstrap_javascripts: File.expand_path('src/twbs/bootstrap-sass/assets/javascripts/bootstrap/*.js'),
+  fontawesome_fonts: File.expand_path('src/FortAwesome/Font-Awesome/fonts/fontawesome-webfont.*'),
   fontawesome_stylesheets: File.expand_path('src/FortAwesome/Font-Awesome/scss/*.scss'),
   glyphicons_fonts: File.expand_path('src/twbs/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.*'),
-  fontawesome_fonts: File.expand_path('src/FortAwesome/Font-Awesome/fonts/fontawesome-webfont.*'),
+  respondjs_javascripts: File.expand_path('src/scottjehl/Respond/src/respond.js')
 }
 
 DESTINATION_FOLDERS = {
+  bootstrap_main_stylesheets: File.expand_path('vendor/assets/stylesheets/twbs'),
   bootstrap_stylesheets: File.expand_path('vendor/assets/stylesheets/twbs/bootstrap'),
   bootstrap_stylesheets_mixins: File.expand_path('vendor/assets/stylesheets/twbs/bootstrap/mixins'),
   bootstrap_javascripts: File.expand_path('vendor/assets/javascripts/twbs/bootstrap'),
+  fontawesome_fonts: File.expand_path('app/assets/fonts'),
   fontawesome_stylesheets: File.expand_path('vendor/assets/stylesheets/fontawesome'),
   glyphicons_fonts: File.expand_path('app/assets/fonts'),
-  fontawesome_fonts: File.expand_path('app/assets/fonts'),
+  respondjs_javascripts: File.expand_path('vendor/assets/javascripts')
 }
 
 namespace :update do
@@ -86,9 +90,6 @@ namespace :update do
 
     puts 'Copying new assets...'
     copy_source_files_to_destination_folders
-
-    puts 'Adding respond.js...'
-    FileUtils.cp File.expand_path('src/scottjehl/Respond/src/respond.js'), File.expand_path('vendor/assets/javascripts/respond.js')
 
     puts 'Importing bootstrap-sprockets.js'
     FileUtils.cp File.expand_path('src/twbs/bootstrap-sass/assets/javascripts/bootstrap-sprockets.js'), File.expand_path('vendor/assets/javascripts/twbs/bootstrap.js')
@@ -143,8 +144,8 @@ def update_glyphicons_paths
 end
 
 def disable_glyphicons
-  file_name = "#{DESTINATION_FOLDERS[:bootstrap_stylesheets]}/bootstrap.scss"
+  file_name = "#{DESTINATION_FOLDERS[:bootstrap_main_stylesheets]}/_bootstrap.scss"
   text = File.read(file_name)
-  text.gsub! "@import \"glyphicons\";\n", ''
+  text.gsub! "@import \"bootstrap/glyphicons\";\n", ''
   File.open(file_name, 'w') { |file| file.puts text }
 end

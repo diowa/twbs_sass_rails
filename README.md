@@ -98,7 +98,7 @@ If you want to exclude some SCSS components, remove `@import "twbs/bootstrap";` 
 @import "twbs/bootstrap/print";
 /* ... */
 ```
-Take a look at [the whole list of SCSS components](/vendor/assets/stylesheets/twbs/bootstrap/bootstrap.scss). **Respect the order of the files and remember to edit paths**.
+Take a look at [the whole list of SCSS components](/vendor/assets/stylesheets/twbs/_bootstrap.scss). **Respect the order of the files and remember to edit paths**.
 
 ### Customize Javascript components
 If you want to exclude some Javascript components, remove `//= require twbs/bootstrap` from `twbs.js.coffee` and add the components you need, e.g:

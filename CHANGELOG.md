@@ -3,6 +3,7 @@
 ## 0.9.0
 
 * Font Awesome 4.2.0
+* bootstrap-sass 3.2.0+2
 * Automatically requires `sass-rails`
 * Updated Rails and Sass dependencies
 * Removed open-ended dependencies
