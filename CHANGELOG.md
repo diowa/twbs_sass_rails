@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.1
+
+* Fixed minitest dependency
+
 ## 0.9.0
 
 * Font Awesome 4.2.0
