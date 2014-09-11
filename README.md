@@ -98,7 +98,7 @@ If you want to exclude some SCSS components, remove `@import "twbs/bootstrap";` 
 @import "twbs/bootstrap/print";
 /* ... */
 ```
-Take a look at [the whole list of SCSS components](/vendor/assets/stylesheets/twbs/bootstrap/bootstrap.scss). **Respect the order of the files and remember to edit paths**.
+Take a look at [the whole list of SCSS components](/vendor/assets/stylesheets/twbs/_bootstrap.scss). **Respect the order of the files and remember to edit paths**.
 
 ### Customize Javascript components
 If you want to exclude some Javascript components, remove `//= require twbs/bootstrap` from `twbs.js.coffee` and add the components you need, e.g:
@@ -117,14 +117,10 @@ Take a look at [the whole list of Javascript components](/vendor/assets/javascri
 
 ## Testing
 
-To launch the tests against Rails 4, run from the root folder of the repository:
+Twbs Sass Rails uses [Appraisal](https://github.com/thoughtbot/appraisal) for testing against multiple gem dependency versions.
 ```bash
-BUNDLE_GEMFILE=$PWD/gemfiles/Gemfile.rails-4.0.x bundle exec rake
-```
-
-For Rails 3.2 run instead:
-```bash
-BUNDLE_GEMFILE=$PWD/gemfiles/Gemfile.rails-3.2.x bundle exec rake
+$ appraisal install # or `update`, if you ran `install` before
+$ appraisal rake
 ```
 
 
@@ -182,3 +178,5 @@ Font Awesome is licensed under the MIT License
 Font Awesome font is licensed under the SIL Open Font License
 
 Font Awesome pictograms are licensed under the CC BY 3.0 License
+
+Respond.js is licensed under the MIT License

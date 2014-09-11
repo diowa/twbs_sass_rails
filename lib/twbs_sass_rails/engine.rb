@@ -1,3 +1,5 @@
+require 'sass-rails'
+
 module TwbsSassRails
   class Engine < ::Rails::Engine
     initializer "TwbsSassRails precompile hook", group: :all do |app|

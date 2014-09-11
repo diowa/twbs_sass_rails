@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.9.0
+
+* Font Awesome 4.2.0
+* bootstrap-sass 3.2.0+2
+* Automatically requires `sass-rails`
+* Updated Rails and Sass dependencies
+* Removed open-ended dependencies
+* Using Appraisal to run tests
+* Tested against Rails 4.0.10 and 4.1.6
+
 ## 0.8.2
 
 * Updated badges
@@ -30,7 +40,7 @@
 ## 0.7.0
 
 * bootstrap-sass 3.2.0
-* Fontawesome 4.1.0
+* Font Awesome 4.1.0
 * Support for Rails 4.1.2 and 4.0.6
 
 ## 0.6.4
@@ -95,7 +105,7 @@
 ## 0.1.0
 
 * Bootstrap 3.0 @ [73f10843a4](https://github.com/twbs/bootstrap/commit/73f10843a487ee94bed755ecfd7c853cb657bf38)
-* Fontawesome 3.2.1 @ [906345058f](https://github.com/FortAwesome/Font-Awesome/commit/906345058f738c2b931f89754a319ed108e17bd8)
+* Font Awesome 3.2.1 @ [906345058f](https://github.com/FortAwesome/Font-Awesome/commit/906345058f738c2b931f89754a319ed108e17bd8)
 * Respond.js 1.3.0 @ [ad87635f83](https://github.com/scottjehl/Respond/commit/ad87635f83f8b811e1da53c082325a4b35960771)
 
 ## 0.0.1
