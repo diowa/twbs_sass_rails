@@ -8,14 +8,14 @@ appraise 'rails-3.2' do
 end
 
 appraise 'rails-4.0' do
-  gem 'rails', '4.0.9'
+  gem 'rails', '4.0.10'
   gem 'uglifier'
   gem 'sass-rails', '~> 4.0.0'
   gem 'minitest', '~> 4'
 end
 
 appraise 'rails-4.1' do
-  gem 'rails', '4.1.5'
+  gem 'rails', '4.1.6'
   gem 'uglifier'
   gem 'sass-rails', '~> 4.0.0'
   gem 'minitest', '~> 5'

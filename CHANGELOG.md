@@ -8,6 +8,7 @@
 * Updated Rails and Sass dependencies
 * Removed open-ended dependencies
 * Using Appraisal to run tests
+* Tested against Rails 4.0.10 and 4.1.6
 
 ## 0.8.2
 
