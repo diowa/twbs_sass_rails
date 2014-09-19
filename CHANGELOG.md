@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.2
+
+* Tested against Ruby 2.1.3
+
 ## 0.9.1
 
 * Fixed minitest dependency
