@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.1
+
+* Tested against Rails 3.2.20, 4.0.11 and 4.1.7
+
+## 1.0.0
+
+* bootstrap-sass 3.3.0
+* Open-ended dependencies on development gems
+
 ## 0.9.2
 
 * Tested against Ruby 2.1.3
