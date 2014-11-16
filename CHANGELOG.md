@@ -3,6 +3,7 @@
 ## 2.0.0
 
 * Removed compatibility with Rails 3.2
+* bootstrap-sass 3.3.1
 
 ## 1.0.1
 
