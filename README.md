@@ -27,14 +27,11 @@ $ rails g twbs_sass_rails:install
 
 Rails 3.2 is [no longer maintained for bugfixes](http://guides.rubyonrails.org/maintenance_policy.html), and you should upgrade as soon as possible.
 
-Starting with bootstrap-sass v3.1.1.1, due to the structural changes from upstream you will need these
-backported asset pipeline gems on Rails 3.2. There is more on why this is necessary in
-https://github.com/twbs/bootstrap-sass/issues/523 and https://github.com/twbs/bootstrap-sass/issues/578.
+Due to the structural changes, the last version working on Rails 3.2 is 0.6.4, which provides Boostrap 3.1.1 and Fontawesome 4.0.3.
 
-```ruby
-gem 'sprockets-rails', '=2.0.0.backport1'
-gem 'sprockets', '=2.2.2.backport2'
-gem 'sass-rails', github: 'guilleiguaran/sass-rails', branch: 'backport'
+Add the gem to your Gemfile
+```rb
+gem 'twbs_sass_rails', '0.6.4'
 ```
 
 

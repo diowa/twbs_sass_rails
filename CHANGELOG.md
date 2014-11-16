@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.0
+
+* Removed compatibility with Rails 3.2
+
 ## 1.0.1
 
 * Tested against Rails 3.2.20, 4.0.11 and 4.1.7
