@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.0
+
+* Removed Rails 3.2 compatibility
+* bootstrap-sass 3.3.1
+
 ## 1.0.1
 
 * Tested against Rails 3.2.20, 4.0.11 and 4.1.7
