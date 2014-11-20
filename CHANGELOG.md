@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.1
+
+* Tested against Rails 4.0.12 and 4.1.8
+* Strengthened dependencies, as per http://bundler.io/rationale.html
+
 ## 2.0.0
 
 * Removed Rails 3.2 compatibility
