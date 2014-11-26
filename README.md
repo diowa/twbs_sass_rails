@@ -5,7 +5,7 @@
 [![Code Climate](https://codeclimate.com/github/diowa/twbs_sass_rails/badges/gpa.svg)](https://codeclimate.com/github/diowa/twbs_sass_rails)
 [![Coverage Status](https://img.shields.io/coveralls/diowa/twbs_sass_rails.svg?branch=master)](https://coveralls.io/r/diowa/twbs_sass_rails?branch=master)
 
-Brings [Bootstrap for Sass](http://getbootstrap.com/) and [Font Awesome](http://fontawesome.io) assets into your Rails application.
+An opinionated gem which brings [Bootstrap for Sass](http://getbootstrap.com/) and [Font Awesome](http://fontawesome.io) assets into your Rails application.
 
 
 
@@ -116,7 +116,7 @@ Take a look at [the whole list of Javascript components](/vendor/assets/javascri
 
 Twbs Sass Rails uses [Appraisal](https://github.com/thoughtbot/appraisal) for testing against multiple gem dependency versions.
 ```bash
-$ appraisal install && appraisal update # Make sure your appraisals are installed and up to date
+$ appraisal install; appraisal update # Make sure your appraisals are installed and up to date
 $ appraisal rake
 ```
 
