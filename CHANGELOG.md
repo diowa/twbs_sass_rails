@@ -4,6 +4,7 @@
 
 * Tested against Rails 4.0.12 and 4.1.8
 * Strengthened dependencies, as per http://bundler.io/rationale.html
+* Improved readme
 
 ## 2.0.0
 
