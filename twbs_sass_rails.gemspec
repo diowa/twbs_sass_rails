@@ -20,12 +20,12 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_runtime_dependency 'rails', '>= 4.0.0', '< 5.0.0'
-  s.add_runtime_dependency 'sass-rails', '~> 4.0.5'
+  s.add_runtime_dependency 'sass-rails', '~> 4.0'
 
-  s.add_development_dependency 'appraisal', '~> 1.0.2'
-  s.add_development_dependency 'capybara', '~> 2.4.4'
+  s.add_development_dependency 'appraisal', '~> 1.0'
+  s.add_development_dependency 'capybara', '~> 2.4'
   s.add_development_dependency 'coveralls', '~> 0.7.1'
   s.add_development_dependency 'minitest', '>= 4.7.5', '< 5.5.0'
-  s.add_development_dependency 'rake', '~> 10.4.0'
+  s.add_development_dependency 'rake', '~> 10.4'
   s.add_development_dependency 'simplecov', '~> 0.9.1'
 end
