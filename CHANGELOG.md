@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.2
+
+* Relaxed some dependencies, we will count on SemVer
+
 ## 2.0.1
 
 * Tested against Rails 4.0.12 and 4.1.8
