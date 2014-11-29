@@ -5,7 +5,7 @@
 [![Code Climate](https://codeclimate.com/github/diowa/twbs_sass_rails/badges/gpa.svg)](https://codeclimate.com/github/diowa/twbs_sass_rails)
 [![Coverage Status](https://img.shields.io/coveralls/diowa/twbs_sass_rails.svg?branch=master)](https://coveralls.io/r/diowa/twbs_sass_rails?branch=master)
 
-Brings [Bootstrap for Sass](http://getbootstrap.com/) and [Font Awesome](http://fontawesome.io) assets into your Rails application.
+An opinionated gem which brings [Bootstrap for Sass](http://getbootstrap.com/) and [Font Awesome](http://fontawesome.io) assets into your Rails application.
 
 
 
@@ -27,14 +27,11 @@ $ rails g twbs_sass_rails:install
 
 Rails 3.2 is [no longer maintained for bugfixes](http://guides.rubyonrails.org/maintenance_policy.html), and you should upgrade as soon as possible.
 
-Starting with bootstrap-sass v3.1.1.1, due to the structural changes from upstream you will need these
-backported asset pipeline gems on Rails 3.2. There is more on why this is necessary in
-https://github.com/twbs/bootstrap-sass/issues/523 and https://github.com/twbs/bootstrap-sass/issues/578.
+Due to the structural changes, the last version working on Rails 3.2 is 0.6.4, which provides Boostrap 3.1.1 and Fontawesome 4.0.3.
 
-```ruby
-gem 'sprockets-rails', '=2.0.0.backport1'
-gem 'sprockets', '=2.2.2.backport2'
-gem 'sass-rails', github: 'guilleiguaran/sass-rails', branch: 'backport'
+Add the gem to your Gemfile
+```rb
+gem 'twbs_sass_rails', '0.6.4'
 ```
 
 
@@ -119,7 +116,7 @@ Take a look at [the whole list of Javascript components](/vendor/assets/javascri
 
 Twbs Sass Rails uses [Appraisal](https://github.com/thoughtbot/appraisal) for testing against multiple gem dependency versions.
 ```bash
-$ appraisal install && appraisal update # Make sure your appraisals are installed and up to date
+$ appraisal install; appraisal update # Make sure your appraisals are installed and up to date
 $ appraisal rake
 ```
 
