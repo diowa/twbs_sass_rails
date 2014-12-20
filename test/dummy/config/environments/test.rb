@@ -17,7 +17,11 @@ Dummy::Application.configure do
   config.static_cache_control = "public, max-age=3600"
 
   # Show full error reports and disable caching.
-  config.consider_all_requests_local       = true
+  if Rails.version.start_with? '4.2'
+    config.serve_static_files = true
+  else
+    config.serve_static_assets = true
+  end
   config.action_controller.perform_caching = false
 
   # Raise exceptions instead of rendering exception templates.
@@ -30,6 +34,9 @@ Dummy::Application.configure do
   # The :test delivery method accumulates sent emails in the
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
+
+  # Randomize the order test cases are executed
+  config.active_support.test_order = :random
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr

@@ -9,12 +9,12 @@ class InstallGeneratorTest < ::Rails::Generators::TestCase
   test "Assert all files are properly created" do
     run_generator
     assert_file 'app/assets/stylesheets/application.css'
-    assert_file 'app/assets/stylesheets/twbs-variables.css.scss' do |file_content|
-      template_file = File.expand_path('../../lib/generators/twbs_sass_rails/install/templates/twbs-variables.css.scss', File.dirname(__FILE__))
+    assert_file 'app/assets/stylesheets/twbs-variables.scss' do |file_content|
+      template_file = File.expand_path('../../lib/generators/twbs_sass_rails/install/templates/twbs-variables.scss', File.dirname(__FILE__))
       assert_match file_content, File.read(template_file)
     end
-    assert_file 'app/assets/stylesheets/twbs.css.scss' do |file_content|
-      template_file = File.expand_path('../../lib/generators/twbs_sass_rails/install/templates/twbs.css.scss', File.dirname(__FILE__))
+    assert_file 'app/assets/stylesheets/twbs.scss' do |file_content|
+      template_file = File.expand_path('../../lib/generators/twbs_sass_rails/install/templates/twbs.scss', File.dirname(__FILE__))
       assert_match file_content, File.read(template_file)
     end
     assert_file 'app/assets/javascripts/application.js'
