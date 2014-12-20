@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.0
+
+* Rails 4.2.0 compatibility
+* Removed deprecated .css.scss extension (possible breaking change)
+
 ## 2.0.2
 
 * Relaxed some dependencies, we will count on SemVer
