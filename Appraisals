@@ -13,7 +13,7 @@ appraise 'rails-4.1' do
 end
 
 appraise 'rails-4.2' do
-  gem 'rails', '4.2.0.rc3'
+  gem 'rails', '4.2.0'
   gem 'uglifier'
   gem 'sass-rails', '~> 5.0'
   gem 'minitest', '~> 5.0'
