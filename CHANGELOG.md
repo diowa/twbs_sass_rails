@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.1
+
+* Ruby 2.2 compatibility
+* Fixed test config
+
 ## 3.0.0
 
 * Rails 4.2.0 compatibility
