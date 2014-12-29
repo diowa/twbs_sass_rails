@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.2
+
+* Removed Rails 3 related stuff
+
 ## 3.0.1
 
 * Ruby 2.2 compatibility
