@@ -34,5 +34,6 @@ describe "twbs sass rails integration" do
     visit '/assets/glyphicons-halflings-regular.svg'
     visit '/assets/glyphicons-halflings-regular.ttf'
     visit '/assets/glyphicons-halflings-regular.woff'
+    visit '/assets/glyphicons-halflings-regular.woff2'
   end
 end
