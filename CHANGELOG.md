@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.2
+
+* Update coveralls badge
+
 ## 3.1.1
 
 * Remove Rails 3.2 related code
