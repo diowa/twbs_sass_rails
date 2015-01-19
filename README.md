@@ -3,7 +3,7 @@
 [![Build Status](https://secure.travis-ci.org/diowa/twbs_sass_rails.svg?branch=master)](https://travis-ci.org/diowa/twbs_sass_rails)
 [![Dependency Status](https://gemnasium.com/diowa/twbs_sass_rails.svg)](https://gemnasium.com/diowa/twbs_sass_rails)
 [![Code Climate](https://codeclimate.com/github/diowa/twbs_sass_rails/badges/gpa.svg)](https://codeclimate.com/github/diowa/twbs_sass_rails)
-[![Coverage Status](https://img.shields.io/coveralls/diowa/twbs_sass_rails.svg?branch=master)](https://coveralls.io/r/diowa/twbs_sass_rails?branch=master)
+[![Coverage Status](https://coveralls.io/repos/diowa/twbs_sass_rails/badge.svg?branch=master)](https://coveralls.io/r/diowa/twbs_sass_rails?branch=master)
 
 An opinionated gem which brings [Bootstrap for Sass](http://getbootstrap.com/) and [Font Awesome](http://fontawesome.io) assets into your Rails application.
 
