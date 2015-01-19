@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.1
+
+* Remove Rails 3.2 related code
+
 ## 3.1.0
 
 * bootstrap-sass 3.3.2
