@@ -27,6 +27,7 @@ describe "twbs sass rails integration" do
     visit '/assets/fontawesome-webfont.svg'
     visit '/assets/fontawesome-webfont.ttf'
     visit '/assets/fontawesome-webfont.woff'
+    visit '/assets/fontawesome-webfont.woff2'
   end
 
   it "provides Glyphicons on the asset pipeline" do
