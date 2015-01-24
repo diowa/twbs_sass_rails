@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'appraisal', '~> 1.0'
   s.add_development_dependency 'capybara', '~> 2.4'
-  s.add_development_dependency 'coveralls', '~> 0.7.1'
+  s.add_development_dependency 'coveralls', '~> 0.7.3'
   s.add_development_dependency 'minitest', '>= 4.7.5', '< 6.0.0'
   s.add_development_dependency 'rake', '~> 10.4'
   s.add_development_dependency 'simplecov', '~> 0.9.1'
