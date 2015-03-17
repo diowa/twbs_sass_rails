@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.4.0
+
+* bootstrap-sass 3.3.4
+
 ## 3.3.0
 
 * bootstrap-sass 3.3.3
