@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.4.0
+
+* bootstrap-sass 3.3.4
+* Test against Rails 4.2.1 and 4.1.10
+
 ## 3.3.0
 
 * bootstrap-sass 3.3.3
