@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.5.1
+
+* Test against Rails 4.1.12 and 4.2.3
+* Update development gems
+
 ## 3.5.0
 
 * bootstrap-sass 3.3.5
