@@ -23,11 +23,11 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'sass-rails', '>= 4.0.5', '< 6.0.0'
   s.add_runtime_dependency 'autoprefixer-rails', '~> 5.0'
 
-  s.add_development_dependency 'appraisal', '~> 1.0'
+  s.add_development_dependency 'appraisal', '~> 2.0'
   s.add_development_dependency 'capybara', '~> 2.4'
-  s.add_development_dependency 'coveralls', '~> 0.7.3'
+  s.add_development_dependency 'coveralls', '~> 0.8.2'
   s.add_development_dependency 'minitest', '>= 4.7.5', '< 6.0.0'
   s.add_development_dependency 'rake', '~> 10.4'
-  s.add_development_dependency 'simplecov', '~> 0.9.1'
+  s.add_development_dependency 'simplecov', '~> 0.10.0'
   s.add_development_dependency 'uglifier', '~> 2.7'
 end
