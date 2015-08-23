@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.6.0.dev
+## 3.6.0
 
 * Font Awesome 4.4.0
 * Update development gems
