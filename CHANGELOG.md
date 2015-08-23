@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.6.0
+
+* Font Awesome 4.4.0
+* Update development gems
+
 ## 3.5.1
 
 * Test against Rails 4.1.12 and 4.2.3
