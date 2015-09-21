@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.6.1
+
+* Support for Autoprefixer 6
+* Test against Rails 4.1.13 and 4.2.4
+
 ## 3.6.0
 
 * Font Awesome 4.4.0
