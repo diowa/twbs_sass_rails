@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.6.2
+
+* Migrate to Travis CI's new infrastructure
+
 ## 3.6.1
 
 * Support for Autoprefixer 6
