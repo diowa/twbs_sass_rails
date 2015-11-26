@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.7.0
+
+* bootstrap-sass 3.3.6
+* Font Awesome 4.5.0
+
 ## 3.6.2
 
 * Migrate to Travis CI's new infrastructure
