@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.8.0
+
+* Improve gemspec
+* Update license
+* Update development gems
+
 ## 3.7.0
 
 * bootstrap-sass 3.3.6
