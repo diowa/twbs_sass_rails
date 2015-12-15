@@ -26,6 +26,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'coveralls', '~> 0.8.10'
   spec.add_development_dependency 'minitest', '>= 4.7.5', '< 6.0.0'
   spec.add_development_dependency 'rake', '~> 10.4'
+  spec.add_development_dependency 'rubocop', '~> 0.35'
   spec.add_development_dependency 'simplecov', '~> 0.11.1'
   spec.add_development_dependency 'uglifier', '~> 2.7'
 end

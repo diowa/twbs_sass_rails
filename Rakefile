@@ -5,6 +5,9 @@ rescue LoadError
 end
 
 require 'rdoc/task'
+require 'rubocop/rake_task'
+
+RuboCop::RakeTask.new
 
 RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
@@ -25,22 +28,22 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = false
 end
 
-task default: :test
+task default: [:rubocop, :test]
 
 SUBMODULES = {
   :'bootstrap-sass' => {
     name: 'Bootstrap Sass',
-    sample_version: 'v3.1.0',
+    sample_version: 'v3.3.6',
     folder: File.expand_path('src/twbs/bootstrap-sass')
   },
   fontawesome: {
     name: 'Font Awesome',
-    sample_version: 'v4.0.3',
+    sample_version: 'v4.5.0',
     folder: File.expand_path('src/FortAwesome/Font-Awesome')
   },
   respond_js: {
     name: 'Respond.js',
-    sample_version: '1.4.1',
+    sample_version: '1.4.2',
     folder: File.expand_path('src/scottjehl/Respond')
   }
 }
@@ -79,7 +82,7 @@ namespace :update do
     end
   end
 
-  desc "Update assets"
+  desc 'Update assets'
   task :assets do
     # git submodule add https://github.com/FortAwesome/Font-Awesome.git src/FortAwesome/Font-Awesome/
     # git submodule add https://github.com/scottjehl/Respond.git src/scottjehl/Respond
@@ -106,6 +109,7 @@ namespace :update do
 end
 
 private
+
 def update_submodule(submodule, tag)
   return unless tag
   puts "Updating #{submodule[:name]} at #{tag}..."
@@ -128,7 +132,7 @@ end
 def update_fontawesome_paths
   file_name = "#{DESTINATION_FOLDERS[:fontawesome_stylesheets]}/_path.scss"
   text = File.read(file_name)
-  text.gsub! /url\(\'\#{\$fa-font-path}\/([\w\-.#]+)[^\)]*\)/, "font-url('\\1')"
+  text.gsub! %r{url\(\'\#{\$fa-font-path}\/([\w\-.#]+)[^\)]*\)}, "font-url('\\1')"
   text.gsub! "fontawesome-webfont.eot') format('embedded-opentype')", "fontawesome-webfont.eot?\#iefix') format('embedded-opentype')"
   text.gsub! "font-url('fontawesome-webfont.svg') format('svg');", "font-url('fontawesome-webfont.svg#fontawesomeregular') format('svg');"
   text.gsub! "//  src: font-url('FontAwesome.otf') format('opentype'); // used when developing fonts", ''
@@ -138,8 +142,7 @@ end
 def update_glyphicons_paths
   file_name = "#{DESTINATION_FOLDERS[:bootstrap_stylesheets]}/_glyphicons.scss"
   text = File.read(file_name)
-  text.gsub! /url\(if.*\#\{\$icon-font-name\}\.(.*)\)\)(.*)/, "font-url('\#{$icon-font-name}.\\1)\\2"
-  text.gsub! /\/\/= depend_on.*\n/, ''
+  text.gsub!(/url\(if.*\#\{\$icon-font-name\}\.(.*)\)\)(.*)/, "font-url('\#{$icon-font-name}.\\1)\\2")
   File.open(file_name, 'w') { |file| file.puts text }
 end
 

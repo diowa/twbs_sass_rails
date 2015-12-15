@@ -1,7 +1,9 @@
 # Changelog
 
-## 3.8.0
+## 4.0.0
 
+* Drop Ruby 1.9 support (Autoprefixer)
+* Add rubocop
 * Improve gemspec
 * Update license
 * Update development gems
