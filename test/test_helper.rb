@@ -4,14 +4,14 @@ ENV['RAILS_ENV'] = 'test'
 if ENV['CI']
   require 'coveralls'
   Coveralls.wear!
-else
-  require 'simplecov'
-  SimpleCov.start 'rails' do
-    add_filter %w(version.rb)
-  end
 end
 
-require File.expand_path('../dummy/config/environment.rb',  __FILE__)
+require 'simplecov'
+SimpleCov.start 'rails' do
+  add_filter %w(version.rb)
+end
+
+require File.expand_path('../dummy/config/environment.rb', __FILE__)
 
 require 'minitest/autorun'
 

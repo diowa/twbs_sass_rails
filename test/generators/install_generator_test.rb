@@ -6,7 +6,7 @@ class InstallGeneratorTest < ::Rails::Generators::TestCase
   destination File.expand_path('../../tmp', File.dirname(__FILE__))
   setup :prepare_destination
 
-  test "Assert all files are properly created" do
+  test 'Assert all files are properly created' do
     run_generator
     assert_file 'app/assets/stylesheets/application.css'
     assert_file 'app/assets/stylesheets/twbs-variables.scss' do |file_content|
@@ -24,17 +24,17 @@ class InstallGeneratorTest < ::Rails::Generators::TestCase
     end
   end
 
-  test "Assert existing application.css properly requires bootstrap" do
+  test 'Assert existing application.css properly requires bootstrap' do
     copy_default_asset 'application.css', 'stylesheets'
     run_generator
     assert_file 'app/assets/stylesheets/application.css', /^ \*\= stub twbs-variables$/
     assert_file 'app/assets/stylesheets/application.css', /^ \*\= require twbs$/
   end
 
-  test "Assert existing application.js properly requires bootstrap" do
+  test 'Assert existing application.js properly requires bootstrap' do
     copy_default_asset 'application.js', 'javascripts'
     run_generator
-    assert_file 'app/assets/javascripts/application.js', /^\/\/\= require twbs\/bootstrap$/
+    assert_file 'app/assets/javascripts/application.js', %r{^\/\/\= require twbs\/bootstrap$}
   end
 
   def copy_default_asset(asset_name, asset_dir)
