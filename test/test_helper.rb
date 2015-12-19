@@ -4,12 +4,14 @@ ENV['RAILS_ENV'] = 'test'
 if ENV['CI']
   require 'coveralls'
   Coveralls.wear!
-else
-  require 'simplecov'
-  SimpleCov.start 'rails'
 end
 
-require File.expand_path('../dummy/config/environment.rb',  __FILE__)
+require 'simplecov'
+SimpleCov.start 'rails' do
+  add_filter %w(version.rb)
+end
+
+require File.expand_path('../dummy/config/environment.rb', __FILE__)
 
 require 'minitest/autorun'
 
@@ -17,12 +19,6 @@ require 'rails/test_help'
 Rails.backtrace_cleaner.remove_silencers!
 
 require 'capybara/rails'
-
-# Turn doesn't support MiniTest 5
-# require 'turn'
-# Turn.config.format = :cool
-# Turn.config.natural = true
-# Turn.config.verbose = true
 
 # Load support files
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }

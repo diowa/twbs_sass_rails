@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.0.0
+
+* Drop Ruby 1.9 support (Autoprefixer)
+* Add rubocop
+* Improve gemspec
+* Update license
+* Update development gems
+
 ## 3.7.0
 
 * bootstrap-sass 3.3.6

@@ -1,0 +1,15 @@
+AllCops:
+  Exclude:
+    - 'src/**/*'
+    - 'test/dummy/bin/*'
+    - 'vendor/bundle/**/*'
+
+Metrics/LineLength:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/HashSyntax:
+  Exclude:
+    - 'Rakefile'

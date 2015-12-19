@@ -166,7 +166,7 @@ For more information on SemVer, please visit [http://semver.org/](http://semver.
 
 ## Copyright and license
 
-Copyright 2015 diowa under [the BSD 2-Clause license](LICENSE).
+Copyright 2016 diowa under [the BSD 2-Clause license](LICENSE).
 
 bootstrap-sass is licensed under the MIT License
 
