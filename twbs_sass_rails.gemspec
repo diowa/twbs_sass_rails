@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z -- {CHANGELOG.md,LICENSE,README.md,app,lib,vendor}`.split("\x0")
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'autoprefixer-rails', '~> 6.1'
+  spec.add_runtime_dependency 'autoprefixer-rails', '~> 6.2'
   spec.add_runtime_dependency 'sass-rails', '>= 4.0.5', '< 6.0.0'
   spec.add_runtime_dependency 'rails', '>= 4.0.13', '< 5.0.0'
 
