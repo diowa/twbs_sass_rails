@@ -17,16 +17,16 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z -- {CHANGELOG.md,LICENSE,README.md,app,lib,vendor}`.split("\x0")
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'autoprefixer-rails', '~> 6.2'
+  spec.add_runtime_dependency 'autoprefixer-rails', '~> 6.3'
   spec.add_runtime_dependency 'sass-rails', '>= 4.0.5', '< 6.0.0'
   spec.add_runtime_dependency 'rails', '>= 4.0.13', '< 5.0.0'
 
   spec.add_development_dependency 'appraisal', '~> 2.1'
   spec.add_development_dependency 'capybara', '~> 2.5'
-  spec.add_development_dependency 'coveralls', '~> 0.8.10'
+  spec.add_development_dependency 'coveralls', '~> 0.8.13'
   spec.add_development_dependency 'minitest', '>= 4.7.5', '< 6.0.0'
   spec.add_development_dependency 'rake', '~> 10.4'
-  spec.add_development_dependency 'rubocop', '~> 0.35'
-  spec.add_development_dependency 'simplecov', '~> 0.11.1'
+  spec.add_development_dependency 'rubocop', '~> 0.37.2'
+  spec.add_development_dependency 'simplecov', '~> 0.11.2'
   spec.add_development_dependency 'uglifier', '~> 2.7'
 end

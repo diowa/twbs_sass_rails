@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.0.1
+
+* Improve generator
+* Improve TravisCI configuration
+* Improve Appraisals configuration
+* Fix Coveralls badge
+* Update development gems
+
 ## 4.0.0
 
 * Drop Ruby 1.9 support (Autoprefixer)
