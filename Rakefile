@@ -46,7 +46,7 @@ SUBMODULES = {
     sample_version: '1.4.2',
     folder: File.expand_path('src/scottjehl/Respond')
   }
-}
+}.freeze
 
 SOURCE_FILES = {
   bootstrap_main_stylesheets: File.expand_path('src/twbs/bootstrap-sass/assets/stylesheets/_bootstrap.scss'),
@@ -57,7 +57,7 @@ SOURCE_FILES = {
   fontawesome_stylesheets: File.expand_path('src/FortAwesome/Font-Awesome/scss/*.scss'),
   glyphicons_fonts: File.expand_path('src/twbs/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.*'),
   respondjs_javascripts: File.expand_path('src/scottjehl/Respond/src/respond.js')
-}
+}.freeze
 
 DESTINATION_FOLDERS = {
   bootstrap_main_stylesheets: File.expand_path('vendor/assets/stylesheets/twbs'),
@@ -68,7 +68,7 @@ DESTINATION_FOLDERS = {
   fontawesome_stylesheets: File.expand_path('vendor/assets/stylesheets/fontawesome'),
   glyphicons_fonts: File.expand_path('app/assets/fonts'),
   respondjs_javascripts: File.expand_path('vendor/assets/javascripts')
-}
+}.freeze
 
 namespace :update do
   SUBMODULES.each do |submodule, v|

@@ -6,27 +6,27 @@ module TwbsSassRails
       desc 'This generator installs Bootstrap to Asset Pipeline'
 
       def copy_js_assets
-        js_manifest = 'app/assets/javascripts/application.js'
-        if File.exist?(File.join(destination_root, js_manifest))
-          insert_into_file js_manifest, "//= require twbs/bootstrap\n", after: "jquery_ujs\n"
-        else
-          copy_file 'application.js', js_manifest
-        end
+        copy_or_insert_into_asset 'app/assets/javascripts/application.js', "//= require twbs/bootstrap\n", after: "jquery_ujs\n"
       end
 
       def copy_css_assets
-        css_manifest = 'app/assets/stylesheets/application.css'
-        if File.exist?(File.join(destination_root, css_manifest))
-          insert_into_file css_manifest, " *= stub twbs-variables\n *= require twbs\n", before: " *= require_tree .\n"
-        else
-          copy_file 'application.css', css_manifest
-        end
+        copy_or_insert_into_asset 'app/assets/stylesheets/application.css', " *= stub twbs-variables\n *= require twbs\n", before: " *= require_tree .\n"
       end
 
       def copy_bootstrap
-        copy_file 'twbs.js.coffee', 'app/assets/javascripts/twbs.js.coffee'
+        copy_file 'twbs.js.coffee',      'app/assets/javascripts/twbs.js.coffee'
         copy_file 'twbs-variables.scss', 'app/assets/stylesheets/twbs-variables.scss'
-        copy_file 'twbs.scss', 'app/assets/stylesheets/twbs.scss'
+        copy_file 'twbs.scss',           'app/assets/stylesheets/twbs.scss'
+      end
+
+      private
+
+      def copy_or_insert_into_asset(manifest, *insert_into_file_params)
+        if File.exist?(File.join(destination_root, manifest))
+          insert_into_file manifest, *insert_into_file_params
+        else
+          copy_file File.basename(manifest), manifest
+        end
       end
     end
   end
