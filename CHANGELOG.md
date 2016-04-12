@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.1.0.dev
+
+* Respond.js 1.4.2
+* Font Awesome 4.6.1
+* Update development gems
+
 ## 4.0.1
 
 * Improve generator
