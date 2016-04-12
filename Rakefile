@@ -25,7 +25,7 @@ Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'
   t.libs << 'test'
   t.pattern = 'test/**/*_test.rb'
-  t.verbose = false
+  t.warning = false
 end
 
 task default: [:rubocop, :test]
@@ -38,7 +38,7 @@ SUBMODULES = {
   },
   fontawesome: {
     name: 'Font Awesome',
-    sample_version: 'v4.5.0',
+    sample_version: 'v4.6.1',
     folder: File.expand_path('src/FortAwesome/Font-Awesome')
   },
   respond_js: {
