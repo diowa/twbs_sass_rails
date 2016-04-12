@@ -1,9 +1,9 @@
 # Changelog
 
-## 4.1.0.dev
+## 4.1.0
 
-* Respond.js 1.4.2
 * Font Awesome 4.6.1
+* Respond.js 1.4.2
 * Update development gems
 
 ## 4.0.1
