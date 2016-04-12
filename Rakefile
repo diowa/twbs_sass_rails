@@ -25,7 +25,7 @@ Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'
   t.libs << 'test'
   t.pattern = 'test/**/*_test.rb'
-  t.verbose = false
+  t.warning = false
 end
 
 task default: [:rubocop, :test]
@@ -38,7 +38,7 @@ SUBMODULES = {
   },
   fontawesome: {
     name: 'Font Awesome',
-    sample_version: 'v4.5.0',
+    sample_version: 'v4.6.1',
     folder: File.expand_path('src/FortAwesome/Font-Awesome')
   },
   respond_js: {
@@ -56,7 +56,7 @@ SOURCE_FILES = {
   fontawesome_fonts: File.expand_path('src/FortAwesome/Font-Awesome/fonts/fontawesome-webfont.*'),
   fontawesome_stylesheets: File.expand_path('src/FortAwesome/Font-Awesome/scss/*.scss'),
   glyphicons_fonts: File.expand_path('src/twbs/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.*'),
-  respondjs_javascripts: File.expand_path('src/scottjehl/Respond/src/respond.js')
+  respondjs_javascripts: File.expand_path('src/scottjehl/Respond/dest/respond.src.js')
 }.freeze
 
 DESTINATION_FOLDERS = {
@@ -103,6 +103,9 @@ namespace :update do
 
     puts 'Disabling glyphicons...'
     disable_glyphicons
+
+    puts 'Renaming respond.src.js...'
+    rename_respond_js
 
     puts 'Done. RUN TESTS NOW!'
   end
@@ -151,4 +154,10 @@ def disable_glyphicons
   text = File.read(file_name)
   text.gsub! "@import \"bootstrap/glyphicons\";\n", ''
   File.open(file_name, 'w') { |file| file.puts text }
+end
+
+def rename_respond_js
+  file_name = "#{DESTINATION_FOLDERS[:respondjs_javascripts]}/respond.src.js"
+  file_new_name = "#{DESTINATION_FOLDERS[:respondjs_javascripts]}/respond.js"
+  File.rename(file_name, file_new_name)
 end
