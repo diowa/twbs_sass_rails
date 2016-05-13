@@ -18,7 +18,12 @@ Dummy::Application.configure do
   else
     config.serve_static_assets = true
   end
-  config.static_cache_control = 'public, max-age=3600'
+
+  if Rails.version.start_with? '4'
+    config.static_cache_control = 'public, max-age=3600'
+  else
+    config.public_file_server.headers = { 'Cache-Control' => 'public, max-age=3600' }
+  end
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true

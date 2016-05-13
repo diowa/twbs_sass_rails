@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'autoprefixer-rails', '~> 6.3'
   spec.add_runtime_dependency 'sass-rails', '>= 4.0.5', '< 6.0.0'
-  spec.add_runtime_dependency 'rails', '>= 4.0.13', '< 5.0.0'
+  spec.add_runtime_dependency 'rails', '>= 4.0.13', '< 5.1.0'
 
   spec.add_development_dependency 'appraisal', '~> 2.1'
   spec.add_development_dependency 'capybara', '~> 2.7'

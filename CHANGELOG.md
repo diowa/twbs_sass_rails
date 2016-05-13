@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.3.0.dev
+
+* Rails 5 compatibility
+
 ## 4.2.0
 
 * Font Awesome 4.6.2
