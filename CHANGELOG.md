@@ -3,6 +3,7 @@
 ## 4.3.0.dev
 
 * Rails 5 compatibility
+* Use scsslint gem
 
 ## 4.2.0
 
