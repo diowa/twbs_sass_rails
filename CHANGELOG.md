@@ -4,6 +4,7 @@
 
 * Rails 5 compatibility
 * Use scsslint gem
+* Update development dependecies
 
 ## 4.2.0
 
