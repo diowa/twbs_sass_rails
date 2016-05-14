@@ -3,6 +3,7 @@
 ## 4.3.0.dev
 
 * Rails 5 compatibility
+* Font Awesome 4.6.3
 * Use scsslint gem
 * Update development dependecies
 
