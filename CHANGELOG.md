@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.3.0
+
+* Rails 5 compatibility
+* Font Awesome 4.6.3
+* Use scsslint gem
+* Update development dependecies
+
 ## 4.2.0
 
 * Font Awesome 4.6.2

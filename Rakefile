@@ -6,8 +6,15 @@ end
 
 require 'rdoc/task'
 require 'rubocop/rake_task'
+require 'scss_lint/rake_task'
 
 RuboCop::RakeTask.new
+
+SCSSLint::RakeTask.new do |t|
+  # SCSSLint does not respect config file
+  # Workaround for https://github.com/brigade/scss-lint/issues/726
+  t.files = Dir['lib/generators/twbs_sass_rails/install/templates/**/*.scss']
+end
 
 RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
@@ -28,7 +35,7 @@ Rake::TestTask.new(:test) do |t|
   t.warning = false
 end
 
-task default: [:rubocop, :test]
+task default: [:rubocop, :scss_lint, :test]
 
 SUBMODULES = {
   :'bootstrap-sass' => {
