@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.3.1
+
+* Update development dependecies
+
 ## 4.3.0
 
 * Rails 5 compatibility
