@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.4.0
+
+* bootstrap-sass 3.3.7
+* Update development dependecies
+
 ## 4.3.1
 
 * Update development dependecies
