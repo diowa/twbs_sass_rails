@@ -40,12 +40,12 @@ task default: [:rubocop, :scss_lint, :test]
 SUBMODULES = {
   :'bootstrap-sass' => {
     name: 'Bootstrap Sass',
-    sample_version: 'v3.3.6',
+    sample_version: 'v3.3.7',
     folder: File.expand_path('src/twbs/bootstrap-sass')
   },
   fontawesome: {
     name: 'Font Awesome',
-    sample_version: 'v4.6.1',
+    sample_version: 'v4.7.0',
     folder: File.expand_path('src/FortAwesome/Font-Awesome')
   },
   respond_js: {
@@ -82,7 +82,7 @@ namespace :update do
     desc "Updates #{v[:name]} at specified tag"
     task submodule, :tag do |t, args|
       if args[:tag]
-        update_submodule(SUBMODULES[submodule], args[:tag])
+        update_submodule SUBMODULES[submodule], args[:tag]
       else
         puts "Please specify a tag, e.g: rake #{t}[#{SUBMODULES[submodule][:sample_version]}]"
       end
