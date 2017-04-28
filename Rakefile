@@ -35,7 +35,7 @@ Rake::TestTask.new(:test) do |t|
   t.warning = false
 end
 
-task default: [:rubocop, :scss_lint, :test]
+task default: %i[rubocop scss_lint test]
 
 SUBMODULES = {
   :'bootstrap-sass' => {

@@ -8,7 +8,7 @@ end
 
 require 'simplecov'
 SimpleCov.start 'rails' do
-  add_filter %w(version.rb)
+  add_filter %w[version.rb]
 end
 
 require File.expand_path('../dummy/config/environment.rb', __FILE__)
