@@ -17,17 +17,17 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z -- {CHANGELOG.md,LICENSE,README.md,app,lib,vendor}`.split("\x0")
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'autoprefixer-rails', '~> 6.5'
-  spec.add_runtime_dependency 'sass-rails', '>= 4.0.5', '< 6.0.0'
-  spec.add_runtime_dependency 'rails', '>= 4.0.13', '< 5.1.0'
+  spec.add_runtime_dependency 'autoprefixer-rails', '~> 6.7'
+  spec.add_runtime_dependency 'sass-rails', '>= 4.0.5', '< 6.0'
+  spec.add_runtime_dependency 'rails', '>= 4.0.13', '< 5.2'
 
-  spec.add_development_dependency 'appraisal', '~> 2.1'
-  spec.add_development_dependency 'capybara', '~> 2.10'
-  spec.add_development_dependency 'coveralls', '~> 0.8.15'
-  spec.add_development_dependency 'minitest', '>= 4.7.5', '< 6.0.0'
-  spec.add_development_dependency 'rake', '~> 11.3'
-  spec.add_development_dependency 'rubocop', '~> 0.44.1'
-  spec.add_development_dependency 'scss_lint', '~> 0.50.2'
-  spec.add_development_dependency 'simplecov', '~> 0.12.0'
-  spec.add_development_dependency 'uglifier', '~> 3.0'
+  spec.add_development_dependency 'appraisal', '~> 2.2'
+  spec.add_development_dependency 'capybara', '~> 2.13'
+  spec.add_development_dependency 'coveralls', '~> 0.8.21'
+  spec.add_development_dependency 'minitest', '>= 4.7.5', '< 6.0'
+  spec.add_development_dependency 'rake', '~> 12.0'
+  spec.add_development_dependency 'rubocop', '~> 0.48.1'
+  spec.add_development_dependency 'scss_lint', '~> 0.53.0'
+  spec.add_development_dependency 'simplecov', '~> 0.14.1'
+  spec.add_development_dependency 'uglifier', '~> 3.2'
 end
