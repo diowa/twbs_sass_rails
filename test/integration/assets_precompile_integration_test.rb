@@ -9,7 +9,7 @@ describe 'assets precompile in production environment integration' do
   end
 
   it 'provides Font Awesome' do
-    %w(eot svg ttf woff woff2).each do |fmt|
+    %w[eot svg ttf woff woff2].each do |fmt|
       font_file = get_asset_name('fontawesome-webfont', fmt)
       visit "/assets/#{font_file}"
       visit "/assets/#{get_asset_name('application', 'css')}"
@@ -19,7 +19,7 @@ describe 'assets precompile in production environment integration' do
   end
 
   it 'provides Glyphicons' do
-    %w(eot svg ttf woff woff2).each do |fmt|
+    %w[eot svg ttf woff woff2].each do |fmt|
       font_file = get_asset_name('glyphicons-halflings-regular', fmt)
       visit "/assets/#{font_file}"
       visit "/assets/#{get_asset_name('application', 'css')}"

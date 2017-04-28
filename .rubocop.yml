@@ -1,4 +1,7 @@
 AllCops:
+  DisplayCopNames: true
+  TargetRailsVersion: 4.0
+  TargetRubyVersion: 2.0
   Exclude:
     - 'src/**/*'
     - 'test/dummy/bin/*'
@@ -14,6 +17,10 @@ Metrics/BlockLength:
 
 Style/Documentation:
   Enabled: false
+
+Style/FileName:
+  Exclude:
+    - Appraisals
 
 Style/HashSyntax:
   Exclude:
