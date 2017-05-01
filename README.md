@@ -22,6 +22,22 @@ $ rails g twbs_sass_rails:install
 ```
 
 
+#### Rails 5.1.x
+
+Rails 5.1 [drops jQuery as a default dependency](http://weblog.rubyonrails.org/2017/2/23/Rails-5-1-beta1/).
+
+If you need the JavaScript part of Bootstrap, add to your Gemfile
+
+```rb
+gem 'jquery-rails', '~> 4.3'
+```
+
+and replace `//= require rails-ujs` in your application JavaScript manifest with
+
+```js
+//= require jquery
+//= require jquery_ujs
+```
 
 #### Rails 3.2.x
 
