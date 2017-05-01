@@ -5,7 +5,7 @@
 [![Code Climate](https://codeclimate.com/github/diowa/twbs_sass_rails/badges/gpa.svg)](https://codeclimate.com/github/diowa/twbs_sass_rails)
 [![Coverage Status](https://coveralls.io/repos/github/diowa/twbs_sass_rails/badge.svg?branch=master)](https://coveralls.io/github/diowa/twbs_sass_rails?branch=master)
 
-An opinionated gem which brings [Bootstrap for Sass](http://getbootstrap.com/), [Font Awesome](http://fontawesome.io) and [Respond.js](http://github.com/scottjehl/Respond) assets into your Rails application.
+An opinionated gem which brings [Bootstrap for Sass](http://getbootstrap.com/), [Font Awesome](http://fontawesome.io) and [Respond.js](https://github.com/scottjehl/Respond) assets into your Rails application.
 
 
 
@@ -74,7 +74,7 @@ Use FontAwesome:
 ```
 
 ### Bootstrap theme
-If you want to use the [Bootstrap theme](http://getbootstrap.com/examples/theme/), uncomment `//@import "twbs/bootstrap/theme"` in your `twbs.css.scss`.
+If you want to use the [Bootstrap theme](https://getbootstrap.com/examples/theme/), uncomment `//@import "twbs/bootstrap/theme"` in your `twbs.css.scss`.
 
 ### Customize SCSS components
 If you want to exclude some SCSS components, remove `@import "twbs/bootstrap";` from your `twbs.css.scss` and add the components you need, e.g.:
@@ -154,19 +154,19 @@ For more information on SemVer, please visit [http://semver.org/](http://semver.
 
 **Geremia Taglialatela**
 
-+ http://github.com/tagliala
-+ http://twitter.com/gtagliala
++ https://github.com/tagliala
++ https://twitter.com/gtagliala
 
 **Cesidio Di Landa**
 
-+ http://github.com/cesidio
-+ http://twitter.com/cesid
++ https://github.com/cesidio
++ https://twitter.com/cesid
 
 
 
 ## Copyright and license
 
-Copyright 2016 diowa under [the BSD 2-Clause license](LICENSE).
+Copyright 2017 diowa under [the BSD 2-Clause license](LICENSE).
 
 bootstrap-sass is licensed under the MIT License
 
