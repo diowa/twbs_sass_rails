@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.6.1
+
+* Maintenance release
+
 ## 4.6.0
 
 * Rails 5.1 compatibility
