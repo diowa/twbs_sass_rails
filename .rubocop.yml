@@ -22,6 +22,7 @@ Style/FileName:
   Exclude:
     - Appraisals
 
-Style/HashSyntax:
-  Exclude:
-    - 'Rakefile'
+# TODO: Remove when targeting Ruby 2.3 because it is already enabled.
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  EnforcedStyle: always
