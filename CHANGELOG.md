@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.7.1
+
+* Fix Appraisals
+
 ## 4.7.0
 
 * Autoprefixer 7 compatibility
