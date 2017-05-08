@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.7.0
+
+* Autoprefixer 7 compatibility
+
 ## 4.6.1
 
 * Maintenance release
