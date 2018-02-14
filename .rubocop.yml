@@ -1,11 +1,15 @@
 AllCops:
   DisplayCopNames: true
-  TargetRailsVersion: 4.0
-  TargetRubyVersion: 2.0
+  TargetRailsVersion: 5.0
+  TargetRubyVersion: 2.2
   Exclude:
     - 'src/**/*'
     - 'test/dummy/bin/*'
     - 'vendor/bundle/**/*'
+
+Lint/InterpolationCheck:
+  Exclude:
+    - Rakefile
 
 Metrics/LineLength:
   Enabled: false
@@ -17,10 +21,6 @@ Metrics/BlockLength:
 
 Style/Documentation:
   Enabled: false
-
-Style/FileName:
-  Exclude:
-    - Appraisals
 
 # TODO: Remove when targeting Ruby 2.3 because it is already enabled.
 Style/FrozenStringLiteralComment:

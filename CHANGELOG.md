@@ -1,5 +1,12 @@
 # Changelog
 
+## 5.0.0
+
+* Add Rails 5.2 compatibility
+* Remove Rails 4.x and Ruby 2.0/2.1 compatibility
+* Test against latest Ruby versions
+* Update dependencies
+
 ## 4.7.1
 
 * Fix Appraisals

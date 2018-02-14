@@ -40,7 +40,7 @@ end
 task default: %i[rubocop scss_lint test]
 
 SUBMODULES = {
-  :'bootstrap-sass' => {
+  'bootstrap-sass': {
     name: 'Bootstrap Sass',
     sample_version: 'v3.3.7',
     folder: File.expand_path('src/twbs/bootstrap-sass')
@@ -129,7 +129,7 @@ def update_submodule(submodule, tag)
 end
 
 def remove_content_from_destination_folders
-  DESTINATION_FOLDERS.each do |_, v|
+  DESTINATION_FOLDERS.each_value do |v|
     FileUtils.rm_rf Dir.glob("#{v}/*")
   end
 end
