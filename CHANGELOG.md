@@ -1,5 +1,11 @@
 # Changelog
 
+## 6.0.0
+
+* Add Autoprefixer 9 compatibility
+* Test against latest Ruby versions
+* Update dependencies
+
 ## 5.0.0
 
 * Add Rails 5.2 compatibility
