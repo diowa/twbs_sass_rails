@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'sass-rails', '~> 5.0'
 
   spec.add_development_dependency 'appraisal', '~> 2.2'
-  spec.add_development_dependency 'capybara', '~> 3.4'
+  spec.add_development_dependency 'capybara', '>= 2.18', '< 4'
   spec.add_development_dependency 'coveralls_reborn', '~> 0.11.1'
   spec.add_development_dependency 'minitest', '~> 5.11'
   spec.add_development_dependency 'rake', '~> 12.3'
