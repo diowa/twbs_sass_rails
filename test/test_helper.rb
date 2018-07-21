@@ -13,7 +13,7 @@ SimpleCov.start 'rails' do
   add_filter %w[version.rb]
 end
 
-require File.expand_path('../dummy/config/environment.rb', __FILE__)
+require File.expand_path('dummy/config/environment.rb', __dir__)
 
 require 'minitest/autorun'
 

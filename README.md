@@ -1,11 +1,10 @@
 # Twbs Sass Rails
 [![Gem Version](https://badge.fury.io/rb/twbs_sass_rails.svg)](http://badge.fury.io/rb/twbs_sass_rails)
 [![Build Status](https://secure.travis-ci.org/diowa/twbs_sass_rails.svg?branch=master)](https://travis-ci.org/diowa/twbs_sass_rails)
-[![Dependency Status](https://gemnasium.com/diowa/twbs_sass_rails.svg)](https://gemnasium.com/diowa/twbs_sass_rails)
 [![Code Climate](https://codeclimate.com/github/diowa/twbs_sass_rails/badges/gpa.svg)](https://codeclimate.com/github/diowa/twbs_sass_rails)
 [![Coverage Status](https://coveralls.io/repos/github/diowa/twbs_sass_rails/badge.svg?branch=master)](https://coveralls.io/github/diowa/twbs_sass_rails?branch=master)
 
-An opinionated gem which brings [Bootstrap for Sass](http://getbootstrap.com/), [Font Awesome](http://fontawesome.io) and [Respond.js](https://github.com/scottjehl/Respond) assets into your Rails application.
+An opinionated gem which brings [Bootstrap for Sass 3.3.7](https://getbootstrap.com/docs/3.3/) 3, [Font Awesome 4.7.0](http://fontawesome.io) and [Respond.js](https://github.com/scottjehl/Respond) assets into your Rails application.
 
 
 
@@ -38,18 +37,6 @@ and replace `//= require rails-ujs` in your application JavaScript manifest with
 //= require jquery
 //= require jquery_ujs
 ```
-
-#### Rails 3.2.x
-
-Rails 3.2 is [no longer maintained for bugfixes](http://guides.rubyonrails.org/maintenance_policy.html), and you should upgrade as soon as possible.
-
-Due to the structural changes, the last version working on Rails 3.2 is 0.6.4, which provides Boostrap 3.1.1 and Fontawesome 4.0.3.
-
-Add the gem to your Gemfile
-```rb
-gem 'twbs_sass_rails', '0.6.4'
-```
-
 
 
 ## Customization
