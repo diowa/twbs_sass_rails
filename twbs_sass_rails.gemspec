@@ -24,11 +24,11 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'appraisal', '~> 2.2'
   spec.add_development_dependency 'capybara', '>= 2.18', '< 4'
-  spec.add_development_dependency 'coveralls_reborn', '~> 0.11.1'
+  spec.add_development_dependency 'coveralls_reborn', '~> 0.12.0'
   spec.add_development_dependency 'minitest', '~> 5.11'
   spec.add_development_dependency 'rake', '~> 12.3'
-  spec.add_development_dependency 'rubocop', '~> 0.58.1'
-  spec.add_development_dependency 'scss_lint', '~> 0.57.0'
+  spec.add_development_dependency 'rubocop', '~> 0.61.1'
+  spec.add_development_dependency 'scss_lint', '~> 0.57.1'
   spec.add_development_dependency 'simplecov', '~> 0.16.1'
   spec.add_development_dependency 'uglifier', '~> 4.1'
 end
