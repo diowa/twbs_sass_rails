@@ -1,5 +1,11 @@
 # Changelog
 
+## 7.0.0
+
+* bootstrap-sass 3.4.0
+* Test against latest Ruby versions
+* Update dependencies
+
 ## 6.0.0
 
 * Add Autoprefixer 9 compatibility

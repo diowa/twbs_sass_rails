@@ -4,7 +4,7 @@
 [![Code Climate](https://codeclimate.com/github/diowa/twbs_sass_rails/badges/gpa.svg)](https://codeclimate.com/github/diowa/twbs_sass_rails)
 [![Coverage Status](https://coveralls.io/repos/github/diowa/twbs_sass_rails/badge.svg?branch=master)](https://coveralls.io/github/diowa/twbs_sass_rails?branch=master)
 
-An opinionated gem which brings [Bootstrap for Sass 3.3.7](https://getbootstrap.com/docs/3.3/) 3, [Font Awesome 4.7.0](http://fontawesome.io) and [Respond.js](https://github.com/scottjehl/Respond) assets into your Rails application.
+An opinionated gem which brings [Bootstrap for Sass 3.4.0](https://getbootstrap.com/docs/3.4/), [Font Awesome 4.7.0](https://fontawesome.com/v4.7.0/) and [Respond.js](https://github.com/scottjehl/Respond) assets into your Rails application.
 
 
 

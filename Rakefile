@@ -124,6 +124,7 @@ private
 
 def update_submodule(submodule, tag)
   return unless tag
+
   puts "Updating #{submodule[:name]} at #{tag}..."
   `cd #{submodule[:folder]} && git fetch && git fetch --tags && git checkout #{tag}`
 end
@@ -148,13 +149,14 @@ def update_fontawesome_paths
   text.gsub! "fontawesome-webfont.eot') format('embedded-opentype')", "fontawesome-webfont.eot?\#iefix') format('embedded-opentype')"
   text.gsub! "font-url('fontawesome-webfont.svg') format('svg');", "font-url('fontawesome-webfont.svg#fontawesomeregular') format('svg');"
   text.gsub! "//  src: font-url('FontAwesome.otf') format('opentype'); // used when developing fonts", ''
+  text.tr! "'", '"'
   File.open(file_name, 'w') { |file| file.puts text }
 end
 
 def update_glyphicons_paths
   file_name = "#{DESTINATION_FOLDERS[:bootstrap_stylesheets]}/_glyphicons.scss"
   text = File.read(file_name)
-  text.gsub!(/url\(if.*\#\{\$icon-font-name\}\.(.*)\)\)(.*)/, "font-url('\#{$icon-font-name}.\\1)\\2")
+  text.gsub!(/url\(if.*\#\{\$icon-font-name\}\.(.*)\)\)(.*)/, "font-url(\"\#{$icon-font-name}.\\1)\\2")
   File.open(file_name, 'w') { |file| file.puts text }
 end
 
