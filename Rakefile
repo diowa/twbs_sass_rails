@@ -155,7 +155,7 @@ end
 def update_glyphicons_paths
   file_name = "#{DESTINATION_FOLDERS[:bootstrap_stylesheets]}/_glyphicons.scss"
   text = File.read(file_name)
-  text.gsub!(/url\(if.*\#\{\$icon-font-name\}\.(.*)\)\)(.*)/, "font-url('\#{$icon-font-name}.\\1)\\2")
+  text.gsub!(/url\(if.*\#\{\$icon-font-name\}\.(.*)\)\)(.*)/, "font-url(\"\#{$icon-font-name}.\\1)\\2")
   File.open(file_name, 'w') { |file| file.puts text }
 end
 
