@@ -149,6 +149,7 @@ def update_fontawesome_paths
   text.gsub! "fontawesome-webfont.eot') format('embedded-opentype')", "fontawesome-webfont.eot?\#iefix') format('embedded-opentype')"
   text.gsub! "font-url('fontawesome-webfont.svg') format('svg');", "font-url('fontawesome-webfont.svg#fontawesomeregular') format('svg');"
   text.gsub! "//  src: font-url('FontAwesome.otf') format('opentype'); // used when developing fonts", ''
+  text.tr! "'", '"'
   File.open(file_name, 'w') { |file| file.puts text }
 end
 
