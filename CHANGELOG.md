@@ -1,5 +1,10 @@
 # Changelog
 
+## 7.1.0
+
+* bootstrap-sass 3.4.1
+* Test against Ruby 2.6.1
+
 ## 7.0.0
 
 * bootstrap-sass 3.4.0
