@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'autoprefixer-rails', '~> 9.0'
-  spec.add_runtime_dependency 'rails', '~> 5.0'
+  spec.add_runtime_dependency 'rails', '>= 5.0', '< 6.1'
   spec.add_runtime_dependency 'sass-rails', '~> 5.0'
 
   spec.add_development_dependency 'appraisal', '~> 2.2'
@@ -27,7 +27,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'coveralls_reborn', '~> 0.12.0'
   spec.add_development_dependency 'minitest', '~> 5.11'
   spec.add_development_dependency 'rake', '~> 12.3'
-  spec.add_development_dependency 'rubocop', '~> 0.64.0'
+  spec.add_development_dependency 'rubocop', '~> 0.68.1'
+  spec.add_development_dependency 'rubocop-performance', '~> 1.1'
   spec.add_development_dependency 'scss_lint', '~> 0.57.1'
   spec.add_development_dependency 'simplecov', '~> 0.16.1'
   spec.add_development_dependency 'uglifier', '~> 4.1'

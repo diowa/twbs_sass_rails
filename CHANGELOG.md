@@ -1,5 +1,10 @@
 # Changelog
 
+## 7.2.0
+
+* Add Rails 6.0 compatibility
+* Test against latest Ruby versions
+
 ## 7.1.0
 
 * bootstrap-sass 3.4.1
