@@ -15,21 +15,24 @@ Gem::Specification.new do |spec|
   spec.homepage    = 'https://github.com/diowa/twbs_sass_rails'
   spec.license     = 'BSD-2-Clause'
 
+  spec.required_ruby_version = '~> 2.4'
+
   spec.files         = `git ls-files -z -- {CHANGELOG.md,LICENSE,README.md,app,lib,vendor}`.split("\x0")
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'autoprefixer-rails', '~> 9.0'
   spec.add_runtime_dependency 'rails', '>= 5.0', '< 6.1'
-  spec.add_runtime_dependency 'sass-rails', '~> 5.0'
+  spec.add_runtime_dependency 'sass-rails', '~> 6.0'
 
   spec.add_development_dependency 'appraisal', '~> 2.2'
   spec.add_development_dependency 'capybara', '>= 2.18', '< 4'
-  spec.add_development_dependency 'coveralls_reborn', '~> 0.12.0'
+  spec.add_development_dependency 'coveralls_reborn', '~> 0.13.2'
   spec.add_development_dependency 'minitest', '~> 5.11'
   spec.add_development_dependency 'rake', '~> 12.3'
-  spec.add_development_dependency 'rubocop', '~> 0.68.1'
-  spec.add_development_dependency 'rubocop-performance', '~> 1.1'
-  spec.add_development_dependency 'scss_lint', '~> 0.57.1'
-  spec.add_development_dependency 'simplecov', '~> 0.16.1'
+  spec.add_development_dependency 'rubocop', '~> 0.74.0'
+  spec.add_development_dependency 'rubocop-performance', '~> 1.4'
+  spec.add_development_dependency 'rubocop-rails', '~> 2.3'
+  spec.add_development_dependency 'scss_lint', '~> 0.58.0'
+  spec.add_development_dependency 'simplecov', '~> 0.17.0'
   spec.add_development_dependency 'uglifier', '~> 4.1'
 end
