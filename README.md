@@ -1,18 +1,23 @@
 # Twbs Sass Rails
-[![Gem Version](https://badge.fury.io/rb/twbs_sass_rails.svg)](http://badge.fury.io/rb/twbs_sass_rails)
+[![Gem Version](https://badge.fury.io/rb/twbs_sass_rails.svg)](https://badge.fury.io/rb/twbs_sass_rails)
 [![Build Status](https://secure.travis-ci.org/diowa/twbs_sass_rails.svg?branch=master)](https://travis-ci.org/diowa/twbs_sass_rails)
 [![Code Climate](https://codeclimate.com/github/diowa/twbs_sass_rails/badges/gpa.svg)](https://codeclimate.com/github/diowa/twbs_sass_rails)
 [![Coverage Status](https://coveralls.io/repos/github/diowa/twbs_sass_rails/badge.svg?branch=master)](https://coveralls.io/github/diowa/twbs_sass_rails?branch=master)
 
-An opinionated gem which brings [Bootstrap for Sass 3.4.0](https://getbootstrap.com/docs/3.4/), [Font Awesome 4.7.0](https://fontawesome.com/v4.7.0/) and [Respond.js](https://github.com/scottjehl/Respond) assets into your Rails application.
+An opinionated gem which brings [Bootstrap for Sass 3.4.1](https://getbootstrap.com/docs/3.4/), [Font Awesome 4.7.0](https://fontawesome.com/v4.7.0/) and [Respond.js](https://github.com/scottjehl/Respond) assets into your Rails application.
 
 
+## Deprecated
+
+We need this gem for some old projects that require Bootstrap 3.
+
+In our new development stack, we are loading Bootstrap and Font Awesome via yarn.
 
 ## Quick start
 
 Add the gem to your Gemfile
 ```rb
-gem 'twbs_sass_rails'
+gem 'twbs_sass_rails', '~> 7.2'
 ```
 
 Run the generator
@@ -23,7 +28,7 @@ $ rails g twbs_sass_rails:install
 
 #### Rails 5.1.x
 
-Rails 5.1 [drops jQuery as a default dependency](http://weblog.rubyonrails.org/2017/2/23/Rails-5-1-beta1/).
+Rails 5.1 [drops jQuery as a default dependency](https://weblog.rubyonrails.org/2017/2/23/Rails-5-1-beta1/).
 
 If you need the JavaScript part of Bootstrap, add to your Gemfile
 
@@ -131,7 +136,7 @@ Please read through our [contributing guidelines](CONTRIBUTING.md). Included are
 
 More over, if your pull request contains patches or features, you must include relevant unit tests.
 
-Editor preferences are available in the [editor config](.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.
+Editor preferences are available in the [editor config](.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
 
 
 
@@ -149,7 +154,7 @@ And constructed with the following guidelines:
 * New additions without breaking backward compatibility bumps the minor (and resets the patch)
 * Bug fixes and misc changes bumps the patch
 
-For more information on SemVer, please visit [http://semver.org/](http://semver.org/).
+For more information on SemVer, please visit [https://semver.org/](https://semver.org/).
 
 
 
