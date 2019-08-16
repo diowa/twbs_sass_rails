@@ -22,6 +22,7 @@ Metrics/BlockLength:
   Exclude:
     - Rakefile
     - 'test/**/*'
+    - twbs_sass_rails.gemspec
 
 Style/Documentation:
   Enabled: false
