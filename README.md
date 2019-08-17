@@ -174,7 +174,7 @@ For more information on SemVer, please visit [https://semver.org/](https://semve
 
 ## Copyright and license
 
-Copyright 2018 diowa under [the BSD 2-Clause license](LICENSE).
+Copyright 2019 diowa under [the BSD 2-Clause license](LICENSE).
 
 bootstrap-sass is licensed under the MIT License
 
