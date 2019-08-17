@@ -1,10 +1,11 @@
 require:
   - rubocop-performance
+  - rubocop-rails
 
 AllCops:
   DisplayCopNames: true
   TargetRailsVersion: 5.0
-  TargetRubyVersion: 2.2
+  TargetRubyVersion: 2.4
   Exclude:
     - 'src/**/*'
     - 'test/dummy/bin/*'
@@ -21,11 +22,7 @@ Metrics/BlockLength:
   Exclude:
     - Rakefile
     - 'test/**/*'
+    - twbs_sass_rails.gemspec
 
 Style/Documentation:
   Enabled: false
-
-# TODO: Remove when targeting Ruby 2.3 because it is already enabled.
-Style/FrozenStringLiteralComment:
-  Enabled: true
-  EnforcedStyle: always

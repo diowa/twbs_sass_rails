@@ -1,5 +1,13 @@
 # Changelog
 
+## 8.0.0
+
+* Drop Ruby 2.2 and 2.3 compatibility
+* Add deprecation notice in the readme
+* Use sass-rails 6.0 and sassc 2.1.0.pre3
+* Test against Rails 6
+* Update dependencies
+
 ## 7.2.0
 
 * Add Rails 6.0 compatibility
