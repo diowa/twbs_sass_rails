@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'sass-rails'
+require 'sassc-rails'
 
 module TwbsSassRails
   class Engine < ::Rails::Engine
