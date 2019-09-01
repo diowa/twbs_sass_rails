@@ -1,5 +1,10 @@
 # Changelog
 
+## 9.0.0
+
+* Depend on sassc-rails and sassc ~> 2.1
+* Test against latest ruby versions
+
 ## 8.0.0
 
 * Drop Ruby 2.2 and 2.3 compatibility
