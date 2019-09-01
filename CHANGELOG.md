@@ -1,5 +1,9 @@
 # Changelog
 
+## 9.0.1
+
+* Fix sassc loading
+
 ## 9.0.0
 
 * Depend on sassc-rails and sassc ~> 2.1
