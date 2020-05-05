@@ -17,7 +17,7 @@ In our new development stack, we are loading Bootstrap and Font Awesome via yarn
 
 Add the gem to your Gemfile
 ```rb
-gem 'twbs_sass_rails', '~> 7.2'
+gem 'twbs_sass_rails', '~> 10.0'
 ```
 
 Run the generator
@@ -174,7 +174,7 @@ For more information on SemVer, please visit [https://semver.org/](https://semve
 
 ## Copyright and license
 
-Copyright 2019 diowa under [the BSD 2-Clause license](LICENSE).
+Copyright 2020 diowa under [the BSD 2-Clause license](LICENSE).
 
 bootstrap-sass is licensed under the MIT License
 
