@@ -4,25 +4,31 @@ require:
 
 AllCops:
   DisplayCopNames: true
-  TargetRailsVersion: 5.0
+  TargetRailsVersion: 4.2
   TargetRubyVersion: 2.4
+  NewCops: enable
   Exclude:
+    - 'gemfiles/vendor/bundle/**/*'
+    - 'node_modules/**/*'
     - 'src/**/*'
     - 'test/dummy/bin/*'
     - 'vendor/bundle/**/*'
 
+Layout/LineLength:
+  Enabled: false
+
 Lint/InterpolationCheck:
   Exclude:
     - Rakefile
-
-Metrics/LineLength:
-  Enabled: false
 
 Metrics/BlockLength:
   Exclude:
     - Rakefile
     - 'test/**/*'
     - twbs_sass_rails.gemspec
+
+Rails/RakeEnvironment:
+  Enabled: false
 
 Style/Documentation:
   Enabled: false

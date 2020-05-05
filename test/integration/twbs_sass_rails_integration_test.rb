@@ -5,23 +5,23 @@ require 'test_helper'
 describe 'twbs sass rails integration' do
   it 'does not include icons by default' do
     visit '/assets/default-twbs.css'
-    page.text.wont_include 'Glyphicons Halflings'
-    page.text.wont_include 'FontAwesome'
+    _(page.text).wont_include 'Glyphicons Halflings'
+    _(page.text).wont_include 'FontAwesome'
   end
 
   it 'provides Bootstrap stylesheets on the asset pipeline' do
     visit '/assets/application.css'
-    page.text.must_include 'MIT License'
+    _(page.text).must_include 'MIT License'
   end
 
   it 'provides Bootstrap javscripts on the asset pipeline' do
     visit '/assets/application.js'
-    page.text.must_include '* Bootstrap'
+    _(page.text).must_include '* Bootstrap'
   end
 
   it 'provides Respond.js on the asset pipeline' do
     visit '/assets/respond.js'
-    page.text.must_include 'Respond.js'
+    _(page.text).must_include 'Respond.js'
   end
 
   it 'provides Font Awesome on the asset pipeline' do
