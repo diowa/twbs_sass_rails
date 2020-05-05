@@ -8,6 +8,8 @@ AllCops:
   TargetRubyVersion: 2.4
   NewCops: enable
   Exclude:
+    - 'gemfiles/vendor/bundle/**/*'
+    - 'node_modules/**/*'
     - 'src/**/*'
     - 'test/dummy/bin/*'
     - 'vendor/bundle/**/*'
