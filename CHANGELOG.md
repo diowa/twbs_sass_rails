@@ -1,5 +1,10 @@
 # Changelog
 
+## 10.0.0
+
+* Add back Rails 4.2 compatibility
+* Test against latest Ruby versions
+
 ## 9.0.1
 
 * Fix sassc loading

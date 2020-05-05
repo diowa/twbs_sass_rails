@@ -17,7 +17,7 @@ In our new development stack, we are loading Bootstrap and Font Awesome via yarn
 
 Add the gem to your Gemfile
 ```rb
-gem 'twbs_sass_rails', '~> 7.2'
+gem 'twbs_sass_rails', '~> 10.0'
 ```
 
 Run the generator
