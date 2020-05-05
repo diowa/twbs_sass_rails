@@ -15,8 +15,8 @@ describe 'assets precompile in production environment integration' do
       font_file = asset_file('fontawesome-webfont', fmt)
       visit "/assets/#{font_file}"
       visit "/assets/#{asset_file('application', 'css')}"
-      page.text.must_include font_file
-      page.text.must_include "#{font_file}?\#iefix" if fmt == 'eot'
+      _(page.text).must_include font_file
+      _(page.text).must_include "#{font_file}?\#iefix" if fmt == 'eot'
     end
   end
 
@@ -25,31 +25,31 @@ describe 'assets precompile in production environment integration' do
       font_file = asset_file('glyphicons-halflings-regular', fmt)
       visit "/assets/#{font_file}"
       visit "/assets/#{asset_file('application', 'css')}"
-      page.text.must_include font_file
-      page.text.must_include "#{font_file}?\#iefix" if fmt == 'eot'
+      _(page.text).must_include font_file
+      _(page.text).must_include "#{font_file}?\#iefix" if fmt == 'eot'
     end
   end
 
   it 'overrides Bootstrap variables' do
     visit "/assets/#{asset_file('application', 'css')}"
-    page.text.must_include 'color:#d10d10'
-    page.text.must_include 'color:#89090a' # automatically generated hover
+    _(page.text).must_include 'color:#d10d10'
+    _(page.text).must_include 'color:#89090a' # automatically generated hover
   end
 
   it 'overrides Bootstrap variables in user stylesheets' do
     visit "/assets/#{asset_file('application', 'css')}"
-    page.text.must_include '.test-class{color:#d10d10}'
-    page.text.must_include '.test-hover-class{color:#89090a}'
+    _(page.text).must_include '.test-class{color:#d10d10}'
+    _(page.text).must_include '.test-hover-class{color:#89090a}'
   end
 
   it 'allows to import mixins' do
     visit "/assets/#{asset_file('application', 'css')}"
-    page.text.must_include '.subfolder{width:0;height:0}'
+    _(page.text).must_include '.subfolder{width:0;height:0}'
   end
 
   it 'sets Sass precision to 10' do
     visit "/assets/#{asset_file('application', 'css')}"
-    page.text.must_include '0.1111111111em'
+    _(page.text).must_include '0.1111111111em'
   end
 
   private
