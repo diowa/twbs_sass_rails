@@ -19,3 +19,7 @@ end
 appraise 'rails-6.0' do
   gem 'rails', '~> 6.0'
 end
+
+appraise 'rails-edge' do
+  gem 'rails', github: 'rails/rails'
+end
