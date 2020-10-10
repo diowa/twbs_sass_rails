@@ -1,5 +1,12 @@
 # Changelog
 
+## 10.1.0
+
+* Allow Ruby 3.0
+* Test against Rails edge
+* Test against latest Ruby versions
+* Update dependencies
+
 ## 10.0.0
 
 * Add back Rails 4.2 compatibility
