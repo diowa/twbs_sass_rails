@@ -145,7 +145,7 @@ end
 def update_fontawesome_paths
   file_name = "#{DESTINATION_FOLDERS[:fontawesome_stylesheets]}/_path.scss"
   text = File.read(file_name)
-  text.gsub! %r{url\(\'\#{\$fa-font-path}\/([\w\-.#]+)[^\)]*\)}, "font-url('\\1')"
+  text.gsub! %r{url\('\#{\$fa-font-path}/([\w\-.#]+)[^)]*\)}, "font-url('\\1')"
   text.gsub! "fontawesome-webfont.eot') format('embedded-opentype')", "fontawesome-webfont.eot?\#iefix') format('embedded-opentype')"
   text.gsub! "font-url('fontawesome-webfont.svg') format('svg');", "font-url('fontawesome-webfont.svg#fontawesomeregular') format('svg');"
   text.gsub! "//  src: font-url('FontAwesome.otf') format('opentype'); // used when developing fonts", ''

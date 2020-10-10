@@ -29,14 +29,14 @@ class InstallGeneratorTest < ::Rails::Generators::TestCase
   test 'Assert existing application.css properly requires bootstrap' do
     copy_default_asset 'application.css', 'stylesheets'
     run_generator
-    assert_file 'app/assets/stylesheets/application.css', /^ \*\= stub twbs-variables$/
-    assert_file 'app/assets/stylesheets/application.css', /^ \*\= require twbs$/
+    assert_file 'app/assets/stylesheets/application.css', /^ \*= stub twbs-variables$/
+    assert_file 'app/assets/stylesheets/application.css', /^ \*= require twbs$/
   end
 
   test 'Assert existing application.js properly requires bootstrap' do
     copy_default_asset 'application.js', 'javascripts'
     run_generator
-    assert_file 'app/assets/javascripts/application.js', %r{^\/\/\= require twbs\/bootstrap$}
+    assert_file 'app/assets/javascripts/application.js', %r{^//= require twbs/bootstrap$}
   end
 
   def copy_default_asset(asset_name, asset_dir)
