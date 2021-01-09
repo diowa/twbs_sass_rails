@@ -39,6 +39,8 @@ class InstallGeneratorTest < ::Rails::Generators::TestCase
     assert_file 'app/assets/javascripts/application.js', %r{^//= require twbs/bootstrap$}
   end
 
+  private
+
   def copy_default_asset(asset_name, asset_dir)
     asset = File.expand_path("default_rails_assets/#{asset_name}", File.dirname(__FILE__))
     destination = File.join(destination_root, "app/assets/#{asset_dir}")
