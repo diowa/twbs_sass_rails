@@ -174,14 +174,4 @@ For more information on SemVer, please visit [https://semver.org/](https://semve
 
 ## Copyright and license
 
-Copyright 2020 diowa under [the BSD 2-Clause license](LICENSE).
-
-bootstrap-sass is licensed under the MIT License
-
-Font Awesome is licensed under the MIT License
-
-Font Awesome font is licensed under the SIL Open Font License
-
-Font Awesome pictograms are licensed under the CC BY 3.0 License
-
-Respond.js is licensed under the MIT License
+Copyright 2021 diowa under [the BSD 2-Clause license](LICENSE).
