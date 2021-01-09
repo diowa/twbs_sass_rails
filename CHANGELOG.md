@@ -1,5 +1,10 @@
 # Changelog
 
+## 10.2.0
+
+* Add Rails 6.1 compatibility
+* Update dependencies
+
 ## 10.1.0
 
 * Allow Ruby 3.0

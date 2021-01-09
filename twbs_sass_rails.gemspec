@@ -25,18 +25,20 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'autoprefixer-rails', '>= 9.0', '< 11'
-  spec.add_runtime_dependency 'rails', '>= 4.2', '< 6.1'
+  spec.add_runtime_dependency 'rails', '>= 4.2', '< 6.2'
   spec.add_runtime_dependency 'sassc-rails', '~> 2.1'
 
   spec.add_development_dependency 'appraisal', '~> 2.3'
   spec.add_development_dependency 'capybara', '~> 3.32'
-  spec.add_development_dependency 'coveralls_reborn', '~> 0.18.0'
+  spec.add_development_dependency 'coveralls_reborn', '~> 0.20.0'
   spec.add_development_dependency 'minitest', '~> 5.14'
   spec.add_development_dependency 'rake', '~> 13.0'
-  spec.add_development_dependency 'rubocop', '~> 0.93.0'
-  spec.add_development_dependency 'rubocop-performance', '~> 1.8'
-  spec.add_development_dependency 'rubocop-rails', '~> 2.5'
+  spec.add_development_dependency 'rubocop', '~> 1.8'
+  spec.add_development_dependency 'rubocop-minitest', '~> 0.10.2'
+  spec.add_development_dependency 'rubocop-performance', '~> 1.9'
+  spec.add_development_dependency 'rubocop-rails', '~> 2.9'
+  spec.add_development_dependency 'rubocop-rake', '~> 0.5.1'
   spec.add_development_dependency 'scss_lint', '~> 0.59.0'
-  spec.add_development_dependency 'simplecov', '>= 0.18.5', '< 0.20'
+  spec.add_development_dependency 'simplecov', '>= 0.18.5', '< 0.22'
   spec.add_development_dependency 'uglifier', '~> 4.2'
 end
